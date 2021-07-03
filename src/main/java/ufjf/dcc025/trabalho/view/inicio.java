@@ -64,7 +64,7 @@ public class inicio extends javax.swing.JFrame {
         jLabel13.setBackground(new java.awt.Color(220, 220, 220));
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("Movimentações");
+        jLabel13.setText("Pagar");
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
