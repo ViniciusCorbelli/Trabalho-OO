@@ -1,7 +1,5 @@
 package ufjf.dcc025.trabalho.model;
 
-import ufjf.dcc025.trabalho.controller.*;
-
 public class Movement {
     private static BankAccount bankAccount;
     private static MovType type;

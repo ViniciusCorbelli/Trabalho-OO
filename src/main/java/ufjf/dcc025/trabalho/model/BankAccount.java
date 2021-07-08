@@ -1,6 +1,5 @@
 package ufjf.dcc025.trabalho.model;
 
-import ufjf.dcc025.trabalho.controller.*;
 import java.util.Random;
 
 public class BankAccount {
