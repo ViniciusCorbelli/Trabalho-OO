@@ -3,10 +3,10 @@ package ufjf.dcc025.trabalho.controller;
 import java.time.LocalDate;
 
 public class Investment {
-    BankAccount bankAccount;
-    Double initialAmount;
-    Double currentAmount;
-    LocalDate date;
+    private static BankAccount bankAccount;
+    private static Double initialAmount;
+    private static Double currentAmount;
+    private static LocalDate date;
 
     public enum InvestmentType {
         CDB, SELIC, LCI
