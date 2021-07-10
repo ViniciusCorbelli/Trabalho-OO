@@ -226,13 +226,13 @@ public class sidebar extends javax.swing.JFrame {
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         close();
-        inicio menu = new inicio();
+        index menu = new index();
         menu.setVisible(true);
     }//GEN-LAST:event_jLabel12MouseClicked
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         close();
-        pagamento menu = new pagamento();
+        payment menu = new payment();
         menu.setVisible(true);
     }//GEN-LAST:event_jPanel1MouseClicked
 

@@ -1,7 +1,7 @@
 package ufjf.dcc025.trabalho.model;
 
-public class Movement {
-    private static BankAccount bankAccount;
+public class movement {
+    private static bankAccount bankAccount;
     private static MovType type;
     private static Double amount;
 

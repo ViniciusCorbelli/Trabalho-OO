@@ -1,6 +1,6 @@
 package ufjf.dcc025.trabalho.model;
 
-public class Address {
+public class address {
 
     private static String street;
     private static String number;
@@ -8,12 +8,12 @@ public class Address {
     private static String city;
     private static String state;
 
-    public Address(String street, String number, String zipcode, String city, String state) {
-        Address.street = street;
-        Address.number = number;
-        Address.zipcode = zipcode;
-        Address.city = city;
-        Address.state = state;;
+    public address(String street, String number, String zipcode, String city, String state) {
+        address.street = street;
+        address.number = number;
+        address.zipcode = zipcode;
+        address.city = city;
+        address.state = state;;
     }
 
     public static String getStreet() {
@@ -37,23 +37,23 @@ public class Address {
     }
 
     public static void setStreet(String street) {
-        Address.street = street;
+        address.street = street;
     }
 
     public static void setNumber(String number) {
-        Address.number = number;
+        address.number = number;
     }
 
     public static void setZipcode(String zipcode) {
-        Address.zipcode = zipcode;
+        address.zipcode = zipcode;
     }
 
     public static void setCity(String city) {
-        Address.city = city;
+        address.city = city;
     }
 
     public static void setState(String state) {
-        Address.state = state;
+        address.state = state;
     }
 
 }

@@ -12,12 +12,12 @@ import java.awt.event.WindowEvent;
  *
  * @author Antonio
  */
-public class pagamento extends javax.swing.JFrame {
+public class payment extends javax.swing.JFrame {
 
     /**
      * Creates new form login
      */
-    public pagamento() {
+    public payment() {
         initComponents();
     }
 
@@ -233,7 +233,7 @@ public class pagamento extends javax.swing.JFrame {
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         close();
-        inicio menu = new inicio();
+        index menu = new index();
         menu.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 

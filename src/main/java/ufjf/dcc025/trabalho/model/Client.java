@@ -2,7 +2,7 @@ package ufjf.dcc025.trabalho.model;
 
 import java.util.UUID;
 
-public class Client {
+public class client {
 
     private static UUID id;
     private static String name;
@@ -10,18 +10,18 @@ public class Client {
     private static String cpf;
     private static String rg;
     private static String birthDate;
-    private static Address address;
+    private static address address;
     private static String password;
 
-    public Client(String name, String email, String cpf, String rg, String birthDate, Address address, String password) {
-        Client.id = UUID.randomUUID();
-        Client.name = name;
-        Client.email = email;
-        Client.cpf = cpf;
-        Client.rg = rg;
-        Client.birthDate = birthDate;
-        Client.address = address;
-        Client.password = password;
+    public client(String name, String email, String cpf, String rg, String birthDate, address address, String password) {
+        client.id = UUID.randomUUID();
+        client.name = name;
+        client.email = email;
+        client.cpf = cpf;
+        client.rg = rg;
+        client.birthDate = birthDate;
+        client.address = address;
+        client.password = password;
     }
 
     public static UUID getId() {
@@ -48,7 +48,7 @@ public class Client {
         return birthDate;
     }
 
-    public static Address getAddress() {
+    public static address getAddress() {
         return address;
     }
 
@@ -57,27 +57,27 @@ public class Client {
     }
 
     public static void setName(String name) {
-        Client.name = name;
+        client.name = name;
     }
 
     public static void setEmail(String email) {
-        Client.email = email;
+        client.email = email;
     }
 
     public static void setCPF(String cpf) {
-        Client.cpf = cpf;
+        client.cpf = cpf;
     }
 
     public static void setRg(String rg) {
-        Client.rg = rg;
+        client.rg = rg;
     }
 
     public static void setBirthDate(String birthDate) {
-        Client.birthDate = birthDate;
+        client.birthDate = birthDate;
     }
 
     public static void setPassword(String password) {
-        Client.password = password;
+        client.password = password;
     }
 
 }

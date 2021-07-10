@@ -2,8 +2,8 @@ package ufjf.dcc025.trabalho.model;
 
 import java.time.LocalDate;
 
-public class Investment {
-    private static BankAccount bankAccount;
+public class investment {
+    private static bankAccount bankAccount;
     private static Double initialAmount;
     private static Double currentAmount;
     private static LocalDate date;

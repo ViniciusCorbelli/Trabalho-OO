@@ -132,13 +132,13 @@ public class login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         close();
-        inicio menu = new inicio();
+        index menu = new index();
         menu.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         close();
-        registro menu = new registro();
+        register menu = new register();
         menu.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 

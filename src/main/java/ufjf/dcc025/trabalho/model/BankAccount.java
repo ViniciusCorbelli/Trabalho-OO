@@ -2,14 +2,14 @@ package ufjf.dcc025.trabalho.model;
 
 import java.util.Random;
 
-public class BankAccount {
+public class bankAccount {
 
-    private static Client client;
+    private static client client;
     private static String branch;
     private static String account;
     private static Double statement;
 
-    public BankAccount(Client client, Double statement) {
+    public bankAccount(client client, Double statement) {
 
         Random rand = new Random();
         String branch = null;
@@ -19,13 +19,13 @@ public class BankAccount {
             account += Integer.toString(rand.nextInt(10) + 0);
         }
 
-        BankAccount.client = client;
-        BankAccount.branch = branch;
-        BankAccount.account = account;
-        BankAccount.statement = statement;
+        bankAccount.client = client;
+        bankAccount.branch = branch;
+        bankAccount.account = account;
+        bankAccount.statement = statement;
     }
 
-    public static Client getClient() {
+    public static client getClient() {
         return client;
     }
 

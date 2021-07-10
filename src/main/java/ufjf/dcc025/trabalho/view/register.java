@@ -12,12 +12,12 @@ import java.awt.event.WindowEvent;
  *
  * @author Vinícius
  */
-public class registro extends javax.swing.JFrame {
+public class register extends javax.swing.JFrame {
 
     /**
      * Creates new form login
      */
-    public registro() {
+    public register() {
         initComponents();
     }
 
