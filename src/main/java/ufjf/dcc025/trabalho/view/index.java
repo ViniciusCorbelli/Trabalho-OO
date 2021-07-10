@@ -60,6 +60,11 @@ public class index extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(140, 92, 242));
         jLabel3.setText("Ver extrato");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(230, 230, 230));
 
@@ -234,6 +239,12 @@ public class index extends javax.swing.JFrame {
         payment menu = new payment();
         menu.setVisible(true);
     }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        close();
+        statement menu = new statement();
+        menu.setVisible(true);
+    }//GEN-LAST:event_jLabel3MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
