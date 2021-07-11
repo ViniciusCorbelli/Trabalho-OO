@@ -41,7 +41,7 @@ public class sidebar extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(140, 92, 242));
-        jLabel1.setText("Banco XXXXX");
+        jLabel1.setText("XBANK");
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(140, 92, 242));

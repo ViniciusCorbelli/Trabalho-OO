@@ -170,7 +170,7 @@
           <Color blue="f2" green="5c" red="8c" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Banco XXXXX"/>
+        <Property name="text" type="java.lang.String" value="XBANK"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">

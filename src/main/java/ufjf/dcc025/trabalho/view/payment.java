@@ -116,7 +116,7 @@ public class payment extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(140, 92, 242));
-        jLabel7.setText("Banco XXXXX");
+        jLabel7.setText("XBANK");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 

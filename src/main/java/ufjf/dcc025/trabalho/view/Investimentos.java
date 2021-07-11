@@ -1,17 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ufjf.dcc025.trabalho.view;
 
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 
-/**
- *
- * @author Vinícius
+/*
+  @autores: Antônio Marcos Souza Pereira - 202065245A
+            Pedro Barbosa Chaves - 202065236A
+            Rafaela Fernandes Horta - 202065182A
+            Vinícius de Oliveira Corbelli - 202065093A
  */
+
 public class Investimentos extends javax.swing.JFrame {
 
     /**
