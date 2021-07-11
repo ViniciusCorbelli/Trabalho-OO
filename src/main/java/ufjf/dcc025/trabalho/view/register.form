@@ -59,11 +59,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jPasswordField4" min="-2" pref="215" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jTextField10" min="-2" pref="110" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextField10" min="-2" pref="104" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField11" min="-2" pref="78" max="-2" attributes="0"/>
+                              <Component id="jTextField14" min="-2" pref="78" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jPasswordField5" min="-2" pref="215" max="-2" attributes="0"/>
                       </Group>
@@ -130,10 +130,10 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField11" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="jTextField10" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField14" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -307,11 +307,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField10ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField11">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField11ActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -364,6 +359,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="jPasswordField5">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField14">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField14ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

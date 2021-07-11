@@ -1,22 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ufjf.dcc025.trabalho.view;
 
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 
-/**
- *
- * @author Vinícius
+/*
+  @autores: Antônio Marcos Souza Pereira - 202065245A
+            Pedro Barbosa Chaves - 202065236A
+            Rafaela Fernandes Horta - 202065182A
+            Vinícius de Oliveira Corbelli - 202065093A
  */
+
 public class sidebar extends javax.swing.JFrame {
 
-    /**
-     * Creates new form login
-     */
     public sidebar() {
         initComponents();
     }
@@ -199,7 +194,7 @@ public class sidebar extends javax.swing.JFrame {
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

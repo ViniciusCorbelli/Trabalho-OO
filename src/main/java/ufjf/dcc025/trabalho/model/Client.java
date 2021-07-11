@@ -2,21 +2,33 @@ package ufjf.dcc025.trabalho.model;
 
 import java.util.UUID;
 
+/*
+  @autores: Antônio Marcos Souza Pereira - 202065245A
+            Pedro Barbosa Chaves - 202065236A
+            Rafaela Fernandes Horta - 202065182A
+            Vinícius de Oliveira Corbelli - 202065093A
+ */
 public class client {
 
     private static UUID id;
     private static String name;
     private static String email;
+    private static accessType access;
     private static String cpf;
     private static String rg;
     private static String birthDate;
     private static address address;
     private static String password;
 
-    public client(String name, String email, String cpf, String rg, String birthDate, address address, String password) {
+    public enum accessType {
+        ADMINISTRATOR, EMPLOYEE, USER
+    }
+
+    public client(String name, String email, accessType access, String cpf, String rg, String birthDate, address address, String password) {
         client.id = UUID.randomUUID();
         client.name = name;
         client.email = email;
+        client.access = access;
         client.cpf = cpf;
         client.rg = rg;
         client.birthDate = birthDate;
@@ -34,6 +46,10 @@ public class client {
 
     public static String getEmail() {
         return email;
+    }
+
+    public static accessType getAccess() {
+        return access;
     }
 
     public static String getCPF() {
@@ -62,6 +78,10 @@ public class client {
 
     public static void setEmail(String email) {
         client.email = email;
+    }
+
+    public static void setAccess(accessType access) {
+        client.access = access;
     }
 
     public static void setCPF(String cpf) {
