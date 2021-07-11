@@ -38,7 +38,7 @@ public class login extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(140, 92, 242));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Banco XXXXX");
+        jLabel1.setText("XBANK");
 
         jButton1.setBackground(new java.awt.Color(140, 92, 242));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N

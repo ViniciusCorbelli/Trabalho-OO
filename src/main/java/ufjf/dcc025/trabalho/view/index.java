@@ -62,6 +62,11 @@ public class index extends javax.swing.JFrame {
         });
 
         jPanel1.setBackground(new java.awt.Color(230, 230, 230));
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1MouseClicked(evt);
+            }
+        });
 
         jLabel5.setBackground(new java.awt.Color(220, 220, 220));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -169,7 +174,7 @@ public class index extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(140, 92, 242));
-        jLabel1.setText("Banco XXXXX");
+        jLabel1.setText("XBANK");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -240,6 +245,12 @@ public class index extends javax.swing.JFrame {
         statement menu = new statement();
         menu.setVisible(true);
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        close();
+        Investimentos menu = new Investimentos();
+        menu.setVisible(true);
+    }//GEN-LAST:event_jPanel1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
