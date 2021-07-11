@@ -15,5 +15,29 @@ public class Movement {
     public enum MovType {
         PIX, TRANSFER, DEPOSIT, PAYMENT, DEBIT
     }
+
+    public static BankAccount getBankAccount() {
+        return bankAccount;
+    }
+
+    public static void setBankAccount(BankAccount bankAccount) {
+        Movement.bankAccount = bankAccount;
+    }
+
+    public static MovType getType() {
+        return type;
+    }
+
+    public static void setType(MovType type) {
+        Movement.type = type;
+    }
+
+    public static Double getAmount() {
+        return amount;
+    }
+
+    public static void setAmount(Double amount) {
+        Movement.amount = amount;
+    }
 }
 

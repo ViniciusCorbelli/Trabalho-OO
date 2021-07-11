@@ -18,4 +18,36 @@ public class Investment {
     public enum InvestmentType {
         CDB, SELIC, LCI
     }
+
+    public static BankAccount getBankAccount() {
+        return bankAccount;
+    }
+
+    public static void setBankAccount(BankAccount bankAccount) {
+        Investment.bankAccount = bankAccount;
+    }
+
+    public static Double getInitialAmount() {
+        return initialAmount;
+    }
+
+    public static void setInitialAmount(Double initialAmount) {
+        Investment.initialAmount = initialAmount;
+    }
+
+    public static Double getCurrentAmount() {
+        return currentAmount;
+    }
+
+    public static void setCurrentAmount(Double currentAmount) {
+        Investment.currentAmount = currentAmount;
+    }
+
+    public static LocalDate getDate() {
+        return date;
+    }
+
+    public static void setDate(LocalDate date) {
+        Investment.date = date;
+    }
 }
