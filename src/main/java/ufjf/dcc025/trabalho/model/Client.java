@@ -3,12 +3,12 @@ package ufjf.dcc025.trabalho.model;
 import java.util.UUID;
 
 /*
-  @autores: Antônio Marcos Souza Pereira - 202065245A
+  @autores: Antï¿½nio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
             Rafaela Fernandes Horta - 202065182A
-            Vinícius de Oliveira Corbelli - 202065093A
+            Vinï¿½cius de Oliveira Corbelli - 202065093A
  */
-public class client {
+public class Client {
 
     private static UUID id;
     private static String name;
@@ -17,23 +17,23 @@ public class client {
     private static String cpf;
     private static String rg;
     private static String birthDate;
-    private static address address;
+    private static Address address;
     private static String password;
 
     public enum accessType {
         ADMINISTRATOR, EMPLOYEE, USER
     }
 
-    public client(String name, String email, accessType access, String cpf, String rg, String birthDate, address address, String password) {
-        client.id = UUID.randomUUID();
-        client.name = name;
-        client.email = email;
-        client.access = access;
-        client.cpf = cpf;
-        client.rg = rg;
-        client.birthDate = birthDate;
-        client.address = address;
-        client.password = password;
+    public Client(String name, String email, accessType access, String cpf, String rg, String birthDate, Address address, String password) {
+        Client.id = UUID.randomUUID();
+        Client.name = name;
+        Client.email = email;
+        Client.access = access;
+        Client.cpf = cpf;
+        Client.rg = rg;
+        Client.birthDate = birthDate;
+        Client.address = address;
+        Client.password = password;
     }
 
     public static UUID getId() {
@@ -64,7 +64,7 @@ public class client {
         return birthDate;
     }
 
-    public static address getAddress() {
+    public static Address getAddress() {
         return address;
     }
 
@@ -73,31 +73,31 @@ public class client {
     }
 
     public static void setName(String name) {
-        client.name = name;
+        Client.name = name;
     }
 
     public static void setEmail(String email) {
-        client.email = email;
+        Client.email = email;
     }
 
     public static void setAccess(accessType access) {
-        client.access = access;
+        Client.access = access;
     }
 
     public static void setCPF(String cpf) {
-        client.cpf = cpf;
+        Client.cpf = cpf;
     }
 
     public static void setRg(String rg) {
-        client.rg = rg;
+        Client.rg = rg;
     }
 
     public static void setBirthDate(String birthDate) {
-        client.birthDate = birthDate;
+        Client.birthDate = birthDate;
     }
 
     public static void setPassword(String password) {
-        client.password = password;
+        Client.password = password;
     }
 
 }

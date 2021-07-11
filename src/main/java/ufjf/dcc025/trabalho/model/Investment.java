@@ -3,14 +3,14 @@ package ufjf.dcc025.trabalho.model;
 import java.time.LocalDate;
 
 /*
-  @autores: Antônio Marcos Souza Pereira - 202065245A
+  @autores: Antï¿½nio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
             Rafaela Fernandes Horta - 202065182A
-            Vinícius de Oliveira Corbelli - 202065093A
+            Vinï¿½cius de Oliveira Corbelli - 202065093A
  */
 
-public class investment {
-    private static bankAccount bankAccount;
+public class Investment {
+    private static BankAccount bankAccount;
     private static Double initialAmount;
     private static Double currentAmount;
     private static LocalDate date;

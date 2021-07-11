@@ -3,20 +3,20 @@ package ufjf.dcc025.trabalho.model;
 import java.util.Random;
 
 /*
-  @autores: Antônio Marcos Souza Pereira - 202065245A
+  @autores: Antï¿½nio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
             Rafaela Fernandes Horta - 202065182A
-            Vinícius de Oliveira Corbelli - 202065093A
+            Vinï¿½cius de Oliveira Corbelli - 202065093A
  */
 
-public class bankAccount {
+public class BankAccount {
 
-    private static client client;
+    private static Client client;
     private static String branch;
     private static String account;
     private static Double statement;
 
-    public bankAccount(client client, Double statement) {
+    public BankAccount(Client client, Double statement) {
 
         Random rand = new Random();
         String branch = null;
@@ -26,13 +26,13 @@ public class bankAccount {
             account += Integer.toString(rand.nextInt(10) + 0);
         }
 
-        bankAccount.client = client;
-        bankAccount.branch = branch;
-        bankAccount.account = account;
-        bankAccount.statement = statement;
+        BankAccount.client = client;
+        BankAccount.branch = branch;
+        BankAccount.account = account;
+        BankAccount.statement = statement;
     }
 
-    public static client getClient() {
+    public static Client getClient() {
         return client;
     }
 
