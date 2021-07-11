@@ -8,14 +8,14 @@
 
 ## Como compilar
 
-Para compilar o programa execute o seguinte c�digo na pasta do reposit�rio:
+Para compilar o programa execute o seguinte código na pasta do repositório:
 ```
 mvn install
 ```
 
 ## Como rodar
 
-Para rodar o programa execute o seguinte c�digo na pasta do reposit�rio:
+Para rodar o programa execute o seguinte código na pasta do repositório:
 ```
 java -jar target/trabalho-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
