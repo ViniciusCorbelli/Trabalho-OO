@@ -11,12 +11,12 @@ import java.util.Random;
 
 public class BankAccount {
 
-    private static Client client;
+    private static User client;
     private static String branch;
     private static String account;
     private static Double statement;
 
-    public BankAccount(Client client, Double statement) {
+    public BankAccount(User client, Double statement) {
 
         Random rand = new Random();
         String branch = null;
@@ -32,7 +32,7 @@ public class BankAccount {
         BankAccount.statement = statement;
     }
 
-    public static Client getClient() {
+    public static User getClient() {
         return client;
     }
 

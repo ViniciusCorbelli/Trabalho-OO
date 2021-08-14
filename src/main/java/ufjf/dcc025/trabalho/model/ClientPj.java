@@ -6,8 +6,16 @@ package ufjf.dcc025.trabalho.model;
             Rafaela Fernandes Horta - 202065182A
             Vin�cius de Oliveira Corbelli - 202065093A
  */
-public class Movement {
+public class ClientPj extends User {
 
-    private static BankAccount bankAccount;
-    private static Double amount;
+    private static String cnpj;
+
+    public static String getCpnj() {
+        return cnpj;
+    }
+
+    public static void setCnpj(String cnpj) {
+        ClientPj.cnpj = cnpj;
+    }
+
 }
