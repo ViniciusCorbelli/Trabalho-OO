@@ -7,4 +7,8 @@ package ufjf.dcc025.trabalho.model;
             Vin�cius de Oliveira Corbelli - 202065093A
  */
 public class Movement {
+
+    private static BankAccount bankAccount;
+    private static Double value;
+    
 }

@@ -14,6 +14,5 @@ public class Pix extends Movement {
     private static enum key {
         CPF, CNPJ;
     }
-    private static Double value;
 
 }

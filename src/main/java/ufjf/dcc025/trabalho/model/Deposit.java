@@ -13,6 +13,5 @@ public class Deposit extends Movement {
     
     private static String accountNumber;
     private static String branchNumber;
-    private static Double value;
     
 }

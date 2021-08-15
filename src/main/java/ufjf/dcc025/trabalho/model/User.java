@@ -15,7 +15,6 @@ public class User {
     private static String email;
     private static accessType access;
     private static String password;
-    private static String birthDate;
 
     public enum accessType {
         ADMINISTRATOR, EMPLOYEE, USER
@@ -29,12 +28,12 @@ public class User {
         return email;
     }
 
-    public static String getBirthDate() {
-        return birthDate;
-    }
-
     public static accessType getAccess() {
         return access;
+    }
+
+    public static String getPassword() {
+        return password;
     }
 
     public static void setName(String name) {
@@ -51,9 +50,5 @@ public class User {
 
     public static void setPassword(String password) {
         User.password = password;
-    }
-
-    public static void setBirthDate(String birthDate) {
-        User.birthDate = birthDate;
     }
 }
