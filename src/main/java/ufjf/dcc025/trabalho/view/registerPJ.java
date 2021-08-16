@@ -13,9 +13,9 @@ import ufjf.dcc025.trabalho.model.User;
             Rafaela Fernandes Horta - 202065182A
             Vinícius de Oliveira Corbelli - 202065093A
  */
-public class register extends javax.swing.JFrame {
+public class registerPJ extends javax.swing.JFrame {
 
-    public register() {
+    public registerPJ() {
         initComponents();
     }
 

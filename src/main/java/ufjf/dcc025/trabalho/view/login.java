@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import javax.swing.JOptionPane;
+import ufjf.dcc025.trabalho.model.User;
 
 /*
   @autores: Antônio Marcos Souza Pereira - 202065245A
@@ -72,7 +73,7 @@ public class login extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(140, 92, 242));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("Abrir conta PJ      ");
+        jLabel4.setText("Abrir conta PF");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
@@ -82,7 +83,7 @@ public class login extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(140, 92, 242));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("Abrir conta PF");
+        jLabel5.setText("Abrir conta PJ");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
@@ -105,16 +106,15 @@ public class login extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 126, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(136, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(352, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(20, 20, 20)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,14 +131,11 @@ public class login extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(78, 78, 78)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(557, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(21, 21, 21)))
+                .addContainerGap())
         );
 
         pack();
@@ -158,6 +155,8 @@ public class login extends javax.swing.JFrame {
         String email = jTextEmail.getText();
         String password = jPassword.getText();
 
+        User user = new User();
+
         if (file.exists()) {
             try {
                 FileReader fileReader = new FileReader(fileName);
@@ -171,17 +170,31 @@ public class login extends javax.swing.JFrame {
 
                     if (line.startsWith("Email: ") && email.equals(line.substring(7))) {
                         login = true;
+                        user.setEmail(email);
                     }
-                    
-                    if (login == true && line.startsWith("Senha: ")) {
-                        if (password.equals(line.substring(7))) {
-                            close();
-                            index menu = new index();
-                            menu.setVisible(true);
-                            return;
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Email/Senha incorreto");
-                            return;
+
+                    if (login == true) {
+                        if (line.startsWith("Nome: ")) {
+                            user.setName(line.substring(6));
+                        }
+                        if (line.startsWith("Acesso: ")) {
+                            User.accessType access = User.accessType.USER;
+                            if (line.substring(8) == "ADMINISTRATOR")
+                                access = User.accessType.ADMINISTRATOR;
+                            if (line.substring(8) == "EMPLOYEE")
+                                access = User.accessType.EMPLOYEE;
+                            user.setAccess(access);
+                        }
+                        if (line.startsWith("Senha: ")) {
+                            if (password.equals(line.substring(7))) {
+                                close();
+                                index menu = new index(user);
+                                menu.setVisible(true);
+                                return;
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Email/Senha incorreto");
+                                return;
+                            }
                         }
                     }
                 }
@@ -193,13 +206,13 @@ public class login extends javax.swing.JFrame {
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         close();
-        register menu = new register();
+        registerPJ menu = new registerPJ();
         menu.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         close();
-        register menu = new register();
+        registerPF menu = new registerPF();
         menu.setVisible(true);
     }//GEN-LAST:event_jLabel5MouseClicked
 

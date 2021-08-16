@@ -253,9 +253,9 @@ public class statement extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        close();
+        /*close();
         index menu = new index();
-        menu.setVisible(true);
+        menu.setVisible(true);*/
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel4AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel4AncestorAdded

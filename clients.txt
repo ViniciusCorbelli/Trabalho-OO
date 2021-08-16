@@ -12,3 +12,11 @@ Cidade: Juiz de Fora
 Estado: MG
 Acesso: USER
 
+Email: codejr@codejr.com
+Senha: 123456
+Tipo: PJ
+Nome: CodeJr
+CNPJ: 12.312.312/3123-12
+Ie: 123123
+Acesso: USER
+

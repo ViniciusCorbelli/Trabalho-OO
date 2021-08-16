@@ -227,9 +227,9 @@ public class payment extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        close();
+        /*close();
         index menu = new index();
-        menu.setVisible(true);
+        menu.setVisible(true);*/
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed

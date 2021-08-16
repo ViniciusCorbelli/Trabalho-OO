@@ -355,9 +355,9 @@ public class settings extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        close();
+        /*close();
         index menu = new index();
-        menu.setVisible(true);
+        menu.setVisible(true);*/
     }//GEN-LAST:event_jLabel5MouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

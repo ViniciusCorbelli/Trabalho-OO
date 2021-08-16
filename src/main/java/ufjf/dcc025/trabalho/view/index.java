@@ -2,6 +2,7 @@ package ufjf.dcc025.trabalho.view;
 
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
+import ufjf.dcc025.trabalho.model.User;
 
 /*
   @autores: Antônio Marcos Souza Pereira - 202065245A
@@ -12,7 +13,7 @@ import java.awt.event.WindowEvent;
 
 public class index extends javax.swing.JFrame {
     
-    public index() {
+    public index(User user) {
         initComponents();
     }
 
