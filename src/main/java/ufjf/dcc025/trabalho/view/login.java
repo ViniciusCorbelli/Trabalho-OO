@@ -206,13 +206,13 @@ public class login extends javax.swing.JFrame {
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         close();
-        registerPJ menu = new registerPJ();
+        registerPF menu = new registerPF();
         menu.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         close();
-        registerPF menu = new registerPF();
+        registerPJ menu = new registerPJ();
         menu.setVisible(true);
     }//GEN-LAST:event_jLabel5MouseClicked
 
