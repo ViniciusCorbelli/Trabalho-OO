@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import javax.swing.JOptionPane;
+import ufjf.dcc025.trabalho.model.BankAccount;
 import ufjf.dcc025.trabalho.model.User;
 
 /*
@@ -144,7 +145,7 @@ public class login extends javax.swing.JFrame {
     private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextEmailActionPerformed
-
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         String line = new String();
@@ -188,7 +189,8 @@ public class login extends javax.swing.JFrame {
                         if (line.startsWith("Senha: ")) {
                             if (password.equals(line.substring(7))) {
                                 close();
-                                index menu = new index(user);
+                                BankAccount bank = BankAccount.getBankAcount(user);
+                                index menu = new index(user, bank);
                                 menu.setVisible(true);
                                 return;
                             } else {
