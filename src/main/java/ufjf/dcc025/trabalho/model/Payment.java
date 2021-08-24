@@ -5,12 +5,15 @@
  */
 package ufjf.dcc025.trabalho.model;
 
-/**
- *
- * @author Vinícius
- */
 public class Payment extends Movement {
 
     private static String barcode;
-    
+
+    public static String getBarcode() {
+        return barcode;
+    }
+
+    public static void setBarcode(String barcode) {
+        Payment.barcode = barcode;
+    }
 }

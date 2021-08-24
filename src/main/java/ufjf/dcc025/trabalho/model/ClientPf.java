@@ -81,4 +81,9 @@ public class ClientPf extends User {
         }
     }
 
+    public static Boolean validateCPF(String cpf){
+        if(cpf.length() != 11) return false;
+        else return true;
+    }
+
 }
