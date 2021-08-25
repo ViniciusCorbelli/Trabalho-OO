@@ -2,6 +2,10 @@ package ufjf.dcc025.trabalho.view;
 
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import ufjf.dcc025.trabalho.model.BankAccount;
 
 /*
   @autores: Antônio Marcos Souza Pereira - 202065245A
@@ -12,8 +16,8 @@ import java.awt.event.WindowEvent;
 
 public class statement extends javax.swing.JFrame {
 
-    public statement() {
-        initComponents();
+    public statement(BankAccount bank) {
+        initComponents(bank);
     }
 
     public void close() {
@@ -23,7 +27,7 @@ public class statement extends javax.swing.JFrame {
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents(BankAccount bank) {
 
         jLabel6 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -48,21 +52,7 @@ public class statement extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(140, 92, 242));
-        jLabel6.setText("Banco XXXXX");
-
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel15.setText("10");
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jLabel16.setText("JUL");
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel17.setText("R$ 00,00");
-
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel18.setText("Pix");
+        jLabel6.setText("XBank");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -125,7 +115,7 @@ public class statement extends javax.swing.JFrame {
         jLabel1.setText("Saldo em conta");
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel8.setText("R$ 000,00");
+        jLabel8.setText("R$ " + bank.getStatement());
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -148,24 +138,66 @@ public class statement extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        
+        String line = new String();
+        boolean account = false;
+        String value = new String();
+        String type = new String();
+        String date = new String();
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("10");
+        try {
+            jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jLabel3.setText("JUL");
+            jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+            jLabel2.setText("10");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel5.setText("R$ 00,00");
+            jLabel3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+            jLabel3.setText("JUL");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel9.setText("Pix");
+            jLabel5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+            jLabel5.setText("R$ 00,00");
 
-        jPanel2.setBackground(new java.awt.Color(230, 230, 230));
+            jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+            jLabel9.setText("Pix");
+            FileReader fileReader = new FileReader("movements.txt");
+            BufferedReader bufferFile = new BufferedReader(fileReader);
+            while (true) {
+                line = bufferFile.readLine();
+                if (line == null) {
+                    break;
+                }
+                if (line.startsWith("N° da Conta: ") && bank.getAccount().equals(line.substring(13))) {
+                    account = true;
+                }
+                if (account == true) {
+                    if (line.startsWith("Valor: ")) {
+                        value = line.substring(7);
+                    }
+                    if (line.startsWith("Tipo: ")) {
+                        type = line.substring(6);
+                    }
+                    if (line.startsWith("Data: ")) {
+                        type = line.substring(6);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel10.setText("Julho de 2021");
+                        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+                        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+                        jLabel2.setText("10");
+
+                        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+                        jLabel3.setText("JUL");
+
+                        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+                        jLabel5.setText("R$ " + value);
+
+                        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+                        jLabel9.setText("Pix");
+                        account = false;
+                    }
+                }
+            }
+        } catch (Exception e) {
+        }
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

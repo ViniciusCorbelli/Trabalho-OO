@@ -7,7 +7,7 @@ package ufjf.dcc025.trabalho.model;
 
 /**
  *
- * @author Vinícius
+ * @author Vinï¿½cius
  */
 public class User {
 

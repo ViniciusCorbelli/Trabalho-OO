@@ -122,4 +122,74 @@ public class BankAccount {
         } catch (IOException ex) {
         }
     }
+
+    public BankAccount getBankAcount(User client) {
+        String line = new String();
+        String fileName = "banckAccount.txt";
+        File file = new File(fileName);
+        BankAccount bank = new BankAccount(client, 0.0);
+        boolean encontrou = false;
+
+        if (file.exists()) {
+            try {
+                FileReader fileReader = new FileReader(fileName);
+                BufferedReader bufferFile = new BufferedReader(fileReader);
+
+                while (true) {
+                    line = bufferFile.readLine();
+                    if (line == null) {
+                        break;
+                    }
+                    if (line.equals("Email: " + client.getEmail())) {
+                        encontrou = true;
+                    }
+                    if (encontrou == true && line.startsWith("Branch: ")) {
+                    	this.branch = line.substring(8);
+                    }
+                    if (encontrou == true && line.startsWith("Account: ")) {
+                    	this.account = line.substring(9);
+                    }
+                    if (encontrou == true && line.startsWith("Statement: ")) {
+                    	this.statement = Double.valueOf(line.substring(11));
+                        return bank;
+                    }
+                }
+            } catch (Exception e) {
+            }
+        }
+        if (encontrou == false) {
+            store(client);
+        }
+        return bank;
+    }
+
+    public void store(User client) {
+
+        Random rand = new Random();
+        String branch = "";
+        String account = "";
+
+        for (int i = 0; i < 3; i++)
+            branch += Integer.toString(rand.nextInt(10) + 0);
+        for (int i = 0; i < 6; i++)
+            account += Integer.toString(rand.nextInt(10) + 0);
+        
+        this.branch = branch;
+        this.account = account;
+
+        try {
+            FileWriter file = new FileWriter("banckAccount.txt", true);
+            PrintWriter printFile = new PrintWriter(file);
+
+            printFile.println("Email: " + client.getEmail());
+            printFile.println("Branch: " + this.branch);
+            printFile.println("Account: " + this.account);
+            printFile.println("Statement: " + this.statement);
+            printFile.println();
+
+            printFile.close();
+            file.close();
+        } catch (IOException ex) {
+        }
+    }
 }

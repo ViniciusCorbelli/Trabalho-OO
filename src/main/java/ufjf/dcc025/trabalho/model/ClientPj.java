@@ -12,23 +12,23 @@ import java.io.PrintWriter;
  */
 public class ClientPj extends User {
 
-    private static String cnpj;
-    private static String Ie;
+    private String cnpj;
+    private String Ie;
 
-    public static String getCnpj() {
+    public String getCnpj() {
         return cnpj;
     }
 
-    public static String getIe() {
+    public String getIe() {
         return Ie;
     }
 
-    public static void setCnpj(String cnpj) {
-        ClientPj.cnpj = cnpj;
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
-    public static void setIe(String Ie) {
-        ClientPj.Ie = Ie;
+    public void setIe(String Ie) {
+        this.Ie = Ie;
     }
 
     public static String store(User user) {

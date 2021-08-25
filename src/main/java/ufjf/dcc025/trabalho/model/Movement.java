@@ -36,7 +36,7 @@ public class Movement {
     
     public static void transfer(BankAccount payer, double value, String type, boolean receber) {
         if (payer.getStatement() < value) {
-            JOptionPane.showMessageDialog(null, "Você não possui saldo suficiente!");
+            JOptionPane.showMessageDialog(null, "Vocï¿½ nï¿½o possui saldo suficiente!");
         } else {
         	if (receber == false)
             payer.removeStatement(value);
@@ -47,7 +47,7 @@ public class Movement {
             try {
                 FileWriter file = new FileWriter("movements.txt", true);
                 PrintWriter printFile = new PrintWriter(file);
-                printFile.println("N° da Conta: " + payer.getAccount());
+                printFile.println("Nï¿½ da Conta: " + payer.getAccount());
                 printFile.println("Valor: " + value);
                 printFile.println("Tipo: Enviado " + type);
                 printFile.println("Data: " + LocalDate.now());

@@ -10,10 +10,10 @@ import ufjf.dcc025.trabalho.model.BankAccount;
 import ufjf.dcc025.trabalho.model.User;
 
 /*
-  @autores: Antônio Marcos Souza Pereira - 202065245A
+  @autores: Antï¿½nio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
             Rafaela Fernandes Horta - 202065182A
-            Vinícius de Oliveira Corbelli - 202065093A
+            Vinï¿½cius de Oliveira Corbelli - 202065093A
  */
 public class login extends javax.swing.JFrame {
 
@@ -207,7 +207,7 @@ public class login extends javax.swing.JFrame {
             } catch (Exception e) {
             }
         }
-        JOptionPane.showMessageDialog(null, "Este usuario não existe.");
+        JOptionPane.showMessageDialog(null, "Este usuario nï¿½o existe.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
