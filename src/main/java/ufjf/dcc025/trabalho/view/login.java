@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import javax.swing.JOptionPane;
+import ufjf.dcc025.trabalho.model.BankAccount;
 import ufjf.dcc025.trabalho.model.User;
 
 /*
@@ -179,16 +180,21 @@ public class login extends javax.swing.JFrame {
                         }
                         if (line.startsWith("Acesso: ")) {
                             User.accessType access = User.accessType.USER;
-                            if (line.substring(8) == "ADMINISTRATOR")
+                            if (line.substring(8) == "ADMINISTRATOR") {
                                 access = User.accessType.ADMINISTRATOR;
-                            if (line.substring(8) == "EMPLOYEE")
+                            }
+                            if (line.substring(8) == "EMPLOYEE") {
                                 access = User.accessType.EMPLOYEE;
+                            }
                             user.setAccess(access);
                         }
                         if (line.startsWith("Senha: ")) {
                             if (password.equals(line.substring(7))) {
                                 close();
-                                index menu = new index(user);
+                                BankAccount bank = new BankAccount(user, null);
+                                bank = bank.getBankAcount(user);
+                                user.setPassword(line.substring(7));
+                                index menu = new index(user, bank);
                                 menu.setVisible(true);
                                 return;
                             } else {

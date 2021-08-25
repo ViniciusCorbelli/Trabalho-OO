@@ -260,7 +260,7 @@ public class registerPJ extends javax.swing.JFrame {
                 jTextSenha.setText("");
                 jTextConfirmarSenha.setText("");
 
-                JOptionPane.showMessageDialog(null, client.store());
+                JOptionPane.showMessageDialog(null, client.store(client));
             } else {
                 JOptionPane.showMessageDialog(null, "As senhas não coincidem!");
             }

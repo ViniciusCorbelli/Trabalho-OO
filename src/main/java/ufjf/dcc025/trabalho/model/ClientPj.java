@@ -30,20 +30,20 @@ public class ClientPj extends User {
     public static void setIe(String Ie) {
         ClientPj.Ie = Ie;
     }
-    
-    public static String store() {
+
+    public static String store(User user) {
 
         try {
             FileWriter file = new FileWriter("clients.txt", true);
             PrintWriter printFile = new PrintWriter(file);
 
-            printFile.println("Email: " + User.getEmail());
-            printFile.println("Senha: " + User.getPassword());
+            printFile.println("Email: " + user.getEmail());
             printFile.println("Tipo: PJ");
-            printFile.println("Nome: " + User.getName());
+            printFile.println("Nome: " + user.getName());
             printFile.println("CNPJ: " + ClientPj.getCnpj());
             printFile.println("Ie: " + ClientPj.getIe());
-            printFile.println("Acesso: " + User.getAccess());
+            printFile.println("Acesso: " + user.getAccess());
+            printFile.println("Senha: " + user.getPassword());
             printFile.println();
 
             printFile.close();

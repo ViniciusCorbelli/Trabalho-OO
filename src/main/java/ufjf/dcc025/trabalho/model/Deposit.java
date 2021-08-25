@@ -11,7 +11,7 @@ package ufjf.dcc025.trabalho.model;
  */
 public class Deposit extends Movement {
     
-    private static String accountNumber;
-    private static String branchNumber;
+    private String accountNumber;
+    private String branchNumber;
     
 }

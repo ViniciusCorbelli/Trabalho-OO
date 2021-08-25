@@ -9,58 +9,58 @@ package ufjf.dcc025.trabalho.model;
 
 public class Address {
 
-    private static String street;
-    private static String number;
-    private static String zipcode;
-    private static String city;
-    private static String state;
+    private String street;
+    private String number;
+    private String zipcode;
+    private String city;
+    private String state;
 
     public Address(String street, String number, String zipcode, String city, String state) {
-        Address.street = street;
-        Address.number = number;
-        Address.zipcode = zipcode;
-        Address.city = city;
-        Address.state = state;;
+        this.street = street;
+        this.number = number;
+        this.zipcode = zipcode;
+        this.city = city;
+        this.state = state;;
     }
 
-    public static String getStreet() {
+    public String getStreet() {
         return street;
     }
 
-    public static String getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public static String getZipcode() {
+    public String getZipcode() {
         return zipcode;
     }
 
-    public static String getCity() {
+    public String getCity() {
         return city;
     }
 
-    public static String getState() {
+    public String getState() {
         return state;
     }
 
-    public static void setStreet(String street) {
-        Address.street = street;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
-    public static void setNumber(String number) {
-        Address.number = number;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
-    public static void setZipcode(String zipcode) {
-        Address.zipcode = zipcode;
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
     }
 
-    public static void setCity(String city) {
-        Address.city = city;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public static void setState(String state) {
-        Address.state = state;
+    public void setState(String state) {
+        this.state = state;
     }
 
 }
