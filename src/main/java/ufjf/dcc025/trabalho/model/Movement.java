@@ -8,7 +8,7 @@ package ufjf.dcc025.trabalho.model;
  */
 public class Movement {
 
-    private static BankAccount bankAccount;
-    private static Double value;
+    private BankAccount bankAccount;
+    private Double value;
     
 }

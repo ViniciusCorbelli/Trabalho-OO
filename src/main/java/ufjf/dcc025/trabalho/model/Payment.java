@@ -11,6 +11,6 @@ package ufjf.dcc025.trabalho.model;
  */
 public class Payment extends Movement {
 
-    private static String barcode;
+    private String barcode;
     
 }

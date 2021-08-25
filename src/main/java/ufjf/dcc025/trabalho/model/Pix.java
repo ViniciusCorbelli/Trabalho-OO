@@ -11,7 +11,7 @@ package ufjf.dcc025.trabalho.model;
  */
 public class Pix extends Movement {
 
-    private static enum key {
+    private enum key {
         CPF, CNPJ;
     }
 

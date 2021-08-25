@@ -11,44 +11,44 @@ package ufjf.dcc025.trabalho.model;
  */
 public class User {
 
-    private static String name;
-    private static String email;
-    private static accessType access;
-    private static String password;
+    private String name;
+    private String email;
+    private accessType access;
+    private String password;
 
     public enum accessType {
         ADMINISTRATOR, EMPLOYEE, USER
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
-    public static String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public static accessType getAccess() {
+    public accessType getAccess() {
         return access;
     }
 
-    public static String getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public static void setName(String name) {
-        User.name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public static void setEmail(String email) {
-        User.email = email;
+    public void setEmail(String email) {
+    	this.email = email;
     }
 
-    public static void setAccess(accessType access) {
-        User.access = access;
+    public void setAccess(accessType access) {
+    	this.access = access;
     }
 
-    public static void setPassword(String password) {
-        User.password = password;
+    public void setPassword(String password) {
+    	this.password = password;
     }
 }

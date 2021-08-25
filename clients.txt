@@ -1,22 +1,14 @@
 Email: vinicius.corbelli@estudante.ufjf.br
-Senha: 123456
 Tipo: PF
-Nome: Vinicius Corbelli
-CPF: 123.123.123-12
-RG: 123123123
+Nome: Vinícius de Oliveira Corbelli
+CPF: 019.648.596-70
+RG: 123123123123
 DataNascimento: 16/02/2001
-Rua: fgwefgwe
+Rua: Rua XXXXXX
 Numero: 123
-CEP: 12312-312
+CEP: 36070-700
 Cidade: Juiz de Fora
 Estado: MG
 Acesso: USER
-
-Email: codejr@codejr.com
 Senha: 123456
-Tipo: PJ
-Nome: CodeJr
-CNPJ: 12.312.312/3123-12
-Ie: 123123
-Acesso: USER
 

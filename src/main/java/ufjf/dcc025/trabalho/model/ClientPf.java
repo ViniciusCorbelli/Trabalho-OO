@@ -13,62 +13,63 @@ import java.util.logging.Logger;
  */
 public class ClientPf extends User {
 
-    private static String cpf;
-    private static String rg;
-    private static Address address;
-    private static String birthDate;
+    private String cpf;
+    private String rg;
+    private Address address;
+    private String birthDate;
 
-    public static String getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public static String getRg() {
+    public String getRg() {
         return rg;
     }
 
-    public static Address getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public static String getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public static void setCpf(String cpf) {
-        ClientPf.cpf = cpf;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
-    public static void setRg(String rg) {
-        ClientPf.rg = rg;
+    public void setRg(String rg) {
+        this.rg = rg;
     }
 
-    public static void setAddress(Address address) {
-        ClientPf.address = address;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
-    public static void setBirthDate(String birthDate) {
-        ClientPf.birthDate = birthDate;
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
     }
 
-    public static String store() {
+    public String store(User client, Address address) {
 
         try {
             FileWriter file = new FileWriter("clients.txt", true);
             PrintWriter printFile = new PrintWriter(file);
 
-            printFile.println("Email: " + User.getEmail());
-            printFile.println("Senha: " + User.getPassword());
+            printFile.println("Email: " + client.getEmail());
             printFile.println("Tipo: PF");
-            printFile.println("Nome: " + User.getName());
-            printFile.println("CPF: " + ClientPf.getCpf());
-            printFile.println("RG: " + ClientPf.getRg());
-            printFile.println("DataNascimento: " + ClientPf.getBirthDate());
-            printFile.println("Rua: " + Address.getStreet());
-            printFile.println("Numero: " + Address.getNumber());
-            printFile.println("CEP: " + Address.getZipcode());
-            printFile.println("Cidade: " + Address.getCity());
-            printFile.println("Estado: " + Address.getState());
-            printFile.println("Acesso: " + User.getAccess());
+            printFile.println("Nome: " + client.getName());
+            printFile.println("CPF: " + this.getCpf());
+            printFile.println("RG: " + this.getRg());
+            printFile.println("DataNascimento: " + this.getBirthDate());
+            printFile.println("Rua: " + address.getStreet());
+            printFile.println("Numero: " + address.getNumber());
+            printFile.println("CEP: " + address.getZipcode());
+            printFile.println("Cidade: " + address.getCity());
+            printFile.println("Estado: " + address.getState());
+            printFile.println("Acesso: " + client.getAccess());
+            printFile.println("Senha: " + client.getPassword());
+
             printFile.println();
 
             printFile.close();
