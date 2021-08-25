@@ -11,10 +11,10 @@ import ufjf.dcc025.trabalho.model.ClientPf;
 import ufjf.dcc025.trabalho.model.User;
 
 /*
-  @autores: Antï¿½nio Marcos Souza Pereira - 202065245A
+  @autores: Antônio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
             Rafaela Fernandes Horta - 202065182A
-            Vinï¿½cius de Oliveira Corbelli - 202065093A
+            Vinícius de Oliveira Corbelli - 202065093A
  */
 public class registerPF extends javax.swing.JFrame {
 
@@ -27,7 +27,7 @@ public class registerPF extends javax.swing.JFrame {
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
     }
 
-    // @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -107,7 +107,7 @@ public class registerPF extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel7.setText("Endereï¿½o");
+        jLabel7.setText("Endereço");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -115,7 +115,7 @@ public class registerPF extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel10.setText("Nï¿½");
+        jLabel10.setText("Nº");
 
         jTextEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -356,18 +356,17 @@ public class registerPF extends javax.swing.JFrame {
                         break;
                     }
                     if (line.equals("Email: " + jTextEmail.getText())) {
-                        JOptionPane.showMessageDialog(null, "Este email jï¿½ estï¿½ cadastrado!");
+                        JOptionPane.showMessageDialog(null, "Este email já está cadastrado!");
                         return;
                     }
                     if (line.equals("CNPJ: " + jTextCPF.getText())) {
-                        JOptionPane.showMessageDialog(null, "Este CPF jï¿½ estï¿½ cadastrado!");
+                        JOptionPane.showMessageDialog(null, "Este CPF já está cadastrado!");
                         return;
                     }
                     if (line.equals("CNPJ: " + jTextRG.getText())) {
-                        JOptionPane.showMessageDialog(null, "Este RG jï¿½ estï¿½ cadastrado!");
+                        JOptionPane.showMessageDialog(null, "Este RG já está cadastrado!");
                         return;
                     }
-                    bufferFile.close();
                 }
             } catch (Exception e) {
             }
@@ -415,7 +414,7 @@ public class registerPF extends javax.swing.JFrame {
 
                 JOptionPane.showMessageDialog(null, client.store(client, address));
             } else {
-                JOptionPane.showMessageDialog(null, "As senhas nï¿½o coincidem!");
+                JOptionPane.showMessageDialog(null, "As senhas não coincidem!");
             }
         } else {
             JOptionPane.showMessageDialog(null, "Preencha todos os campos.");

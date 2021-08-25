@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 /*
   @autores: Ant�nio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
@@ -71,19 +73,16 @@ public class BankAccount {
                         encontrou = true;
                     }
                     if (encontrou == true && line.startsWith("Branch: ")) {
-                        this.branch = line.substring(8);
+                    	this.branch = line.substring(8);
                     }
                     if (encontrou == true && line.startsWith("Account: ")) {
-                        this.account = line.substring(9);
+                    	this.account = line.substring(9);
                     }
                     if (encontrou == true && line.startsWith("Statement: ")) {
-                        this.statement = Double.valueOf(line.substring(11));
+                    	this.statement = Double.valueOf(line.substring(11));
                         return bank;
                     }
-                    bufferFile.close();
-
                 }
-                
             } catch (Exception e) {
             }
         }
@@ -103,7 +102,7 @@ public class BankAccount {
             branch += Integer.toString(rand.nextInt(10) + 0);
         for (int i = 0; i < 6; i++)
             account += Integer.toString(rand.nextInt(10) + 0);
-
+        
         this.branch = branch;
         this.account = account;
 

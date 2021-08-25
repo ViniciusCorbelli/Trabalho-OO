@@ -56,9 +56,4 @@ public class ClientPj extends User {
         }
     }
 
-    public static Boolean validateCNPJ(String cnpj){
-        if(cnpj.length() != 14) return false;
-        else return true;
-    }
-
 }

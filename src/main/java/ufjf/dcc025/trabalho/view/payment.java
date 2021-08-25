@@ -4,10 +4,10 @@ import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 
 /*
-  @autores: Antï¿½nio Marcos Souza Pereira - 202065245A
+  @autores: Antônio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
             Rafaela Fernandes Horta - 202065182A
-            Vinï¿½cius de Oliveira Corbelli - 202065093A
+            Vinícius de Oliveira Corbelli - 202065093A
  */
 
 public class payment extends javax.swing.JFrame {
@@ -21,7 +21,7 @@ public class payment extends javax.swing.JFrame {
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
     }
     
-    // @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -43,7 +43,7 @@ public class payment extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(140, 92, 242));
-        jLabel6.setText("XBank");
+        jLabel6.setText("Banco XXXXX");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -60,11 +60,11 @@ public class payment extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Nï¿½ da Conta");
+        jLabel3.setText("N° da Conta");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Agï¿½ncia");
+        jLabel2.setText("Agência");
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

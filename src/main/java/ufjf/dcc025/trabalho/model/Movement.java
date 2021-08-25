@@ -3,8 +3,9 @@ package ufjf.dcc025.trabalho.model;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.swing.JOptionPane;
 import java.time.LocalDate;
+
+import javax.swing.JOptionPane;
 
 /*
   @autores: Antï¿½nio Marcos Souza Pereira - 202065245A
@@ -13,29 +14,29 @@ import java.time.LocalDate;
             Vinï¿½cius de Oliveira Corbelli - 202065093A
  */
 public class Movement {
-    private static BankAccount bankAccount;
-    private static double value;
 
-    public static BankAccount getBankAccount() {
+    private BankAccount bankAccount;
+    private Double value;
+    
+    public BankAccount getBankAccount() {
         return bankAccount;
     }
 
-    public static void setBankAccount(BankAccount bankAccount) {
-        Movement.bankAccount = bankAccount;
+    public void setBankAccount(BankAccount bankAccount) {
+    	this.bankAccount = bankAccount;
     }
 
-    public static double getValue() {
+    public double getValue() {
         return value;
     }
 
-    public static void setValue(Double value) {
-        Movement.value = value;
+    public void setValue(Double value) {
+        this.value = value;
     }
-
-    // Colocar o mÃ©todo no lugar certo dps
-    public static void transfer(BankAccount payer, BankAccount receiver, double value, String type) {
+    
+    public void transfer(BankAccount payer, BankAccount receiver, double value, String type) {
         if (payer.getStatement() < value) { // Remover os 'static' da classe BankAccount
-            JOptionPane.showMessageDialog(null, "VocÃª nÃ£o possui saldo suficiente!");
+            JOptionPane.showMessageDialog(null, "Você não possui saldo suficiente!");
         } else {
             payer.removeStatement(value);
             receiver.addStatement(value);
@@ -44,12 +45,12 @@ public class Movement {
             try {
                 FileWriter file = new FileWriter("movements.txt", true);
                 PrintWriter printFile = new PrintWriter(file);
-                printFile.println("NÂ° da Conta: " + payer.getAccount());
+                printFile.println("N° da Conta: " + payer.getAccount());
                 printFile.println("Valor: " + value);
                 printFile.println("Tipo: Enviado " + type);
                 printFile.println("Data: " + LocalDate.now());
                 printFile.println();
-                printFile.println("NÂ° da Conta: " + receiver.getAccount());
+                printFile.println("N° da Conta: " + receiver.getAccount());
                 printFile.println("Valor: " + value);
                 printFile.println("Tipo: Recebendo " + type);
                 printFile.println("Data: " + LocalDate.now());
@@ -60,5 +61,5 @@ public class Movement {
             }
         }
     }
-
+    
 }

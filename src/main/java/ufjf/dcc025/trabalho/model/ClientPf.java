@@ -3,6 +3,7 @@ package ufjf.dcc025.trabalho.model;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Logger;
 
 /*
   @autores: Ant�nio Marcos Souza Pereira - 202065245A
@@ -79,11 +80,6 @@ public class ClientPf extends User {
         } catch (IOException ex) {
             return "Erro ao cadastrar!";
         }
-    }
-
-    public static Boolean validateCPF(String cpf){
-        if(cpf.length() != 11) return false;
-        else return true;
     }
 
 }

@@ -5,24 +5,13 @@
  */
 package ufjf.dcc025.trabalho.model;
 
+/**
+ *
+ * @author Vinícius
+ */
 public class Deposit extends Movement {
     
     private String accountNumber;
     private String branchNumber;
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public String getBranchNumber() {
-        return branchNumber;
-    }
-
-    public void setBranchNumber(String branchNumber) {
-        this.branchNumber = branchNumber;
-    }
+    
 }

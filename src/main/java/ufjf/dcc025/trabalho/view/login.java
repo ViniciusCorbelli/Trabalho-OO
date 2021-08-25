@@ -10,10 +10,10 @@ import ufjf.dcc025.trabalho.model.BankAccount;
 import ufjf.dcc025.trabalho.model.User;
 
 /*
-  @autores: Antï¿½nio Marcos Souza Pereira - 202065245A
+  @autores: Antônio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
             Rafaela Fernandes Horta - 202065182A
-            Vinï¿½cius de Oliveira Corbelli - 202065093A
+            Vinícius de Oliveira Corbelli - 202065093A
  */
 public class login extends javax.swing.JFrame {
 
@@ -26,7 +26,7 @@ public class login extends javax.swing.JFrame {
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
     }
 
-    // @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -145,7 +145,7 @@ public class login extends javax.swing.JFrame {
     private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextEmailActionPerformed
-    
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         String line = new String();
@@ -202,12 +202,11 @@ public class login extends javax.swing.JFrame {
                             }
                         }
                     }
-                    bufferFile.close();
                 }
             } catch (Exception e) {
             }
         }
-        JOptionPane.showMessageDialog(null, "Este usuario nï¿½o existe.");
+        JOptionPane.showMessageDialog(null, "Este usuario não existe.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
