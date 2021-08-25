@@ -12,10 +12,10 @@ import ufjf.dcc025.trabalho.model.ClientPj;
 import ufjf.dcc025.trabalho.model.User;
 
 /*
-  @autores: Antônio Marcos Souza Pereira - 202065245A
+  @autores: Antï¿½nio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
             Rafaela Fernandes Horta - 202065182A
-            Vinícius de Oliveira Corbelli - 202065093A
+            Vinï¿½cius de Oliveira Corbelli - 202065093A
  */
 public class registerPJ extends javax.swing.JFrame {
 
@@ -28,7 +28,7 @@ public class registerPJ extends javax.swing.JFrame {
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
     }
 
-    @SuppressWarnings("unchecked")
+    // @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -225,13 +225,14 @@ public class registerPJ extends javax.swing.JFrame {
                         break;
                     }
                     if (line.equals("Email: " + jTextEmail.getText())) {
-                        JOptionPane.showMessageDialog(null, "Este email já está cadastrado!");
+                        JOptionPane.showMessageDialog(null, "Este email jï¿½ estï¿½ cadastrado!");
                         return;
                     }
                     if (line.equals("CNPJ: " + jTextCNPJ.getText())) {
-                        JOptionPane.showMessageDialog(null, "Este CNPJ já está cadastrado!");
+                        JOptionPane.showMessageDialog(null, "Este CNPJ jï¿½ estï¿½ cadastrado!");
                         return;
                     }
+                    bufferFile.close();
                 }
             } catch (Exception e) {
             }
@@ -262,7 +263,7 @@ public class registerPJ extends javax.swing.JFrame {
 
                 JOptionPane.showMessageDialog(null, client.store(client));
             } else {
-                JOptionPane.showMessageDialog(null, "As senhas não coincidem!");
+                JOptionPane.showMessageDialog(null, "As senhas nï¿½o coincidem!");
             }
         } else {
             JOptionPane.showMessageDialog(null, "Preencha todos os campos.");

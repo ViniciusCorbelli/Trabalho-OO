@@ -26,7 +26,7 @@ public class login extends javax.swing.JFrame {
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
     }
 
-    @SuppressWarnings("unchecked")
+    // @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -202,6 +202,7 @@ public class login extends javax.swing.JFrame {
                             }
                         }
                     }
+                    bufferFile.close();
                 }
             } catch (Exception e) {
             }
