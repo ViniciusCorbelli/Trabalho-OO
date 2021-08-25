@@ -7,8 +7,22 @@ package ufjf.dcc025.trabalho.model;
             Vin�cius de Oliveira Corbelli - 202065093A
  */
 public class Movement {
-
     private BankAccount bankAccount;
-    private Double value;
-    
+    private double value;
+
+    public BankAccount getBankAccount() {
+        return bankAccount;
+    }
+
+    public void setBankAccount(BankAccount bankAccount) {
+        this.bankAccount = bankAccount;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(Double value) {
+        this.value = value;
+    }
 }
