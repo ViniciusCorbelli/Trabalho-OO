@@ -28,7 +28,6 @@ public class transfer extends javax.swing.JFrame {
     }
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents(BankAccount bank) {
 
         jLabel6 = new javax.swing.JLabel();
@@ -63,12 +62,7 @@ public class transfer extends javax.swing.JFrame {
                 jButton1MouseClicked(evt, bank);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
+        
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("N° da Conta");
@@ -77,25 +71,10 @@ public class transfer extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Agência");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(140, 92, 242));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("Voltar");
-        jLabel4.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jLabel4AncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt, bank);
@@ -113,17 +92,6 @@ public class transfer extends javax.swing.JFrame {
         jTextField5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField5.setText("");
         jTextField5.setToolTipText("");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
 
         jLabel7.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(140, 92, 242));
@@ -231,34 +199,14 @@ public class transfer extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
         close();
         index menu = new index(bank);
         menu.setVisible(true);
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jLabel4AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel4AncestorAdded
-
-    }//GEN-LAST:event_jLabel4AncestorAdded
-    
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
     	if (!(jTextField5.getText().equals("") || jTextField1.getText().equals("") || jTextField2.getText().equals("") || jPasswordField4.getText().equals(""))) {
     		if (jPasswordField4.getText().equals(bank.getClient().getPassword())) {
@@ -292,7 +240,6 @@ public class transfer extends javax.swing.JFrame {
     }  
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -308,5 +255,4 @@ public class transfer extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField5;
-    // End of variables declaration//GEN-END:variables
 }

@@ -27,7 +27,6 @@ public class login extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -64,12 +63,6 @@ public class login extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Senha");
-
-        jTextEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextEmailActionPerformed(evt);
-            }
-        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(140, 92, 242));
@@ -140,11 +133,7 @@ public class login extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextEmailActionPerformed
+    }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
@@ -207,22 +196,21 @@ public class login extends javax.swing.JFrame {
             }
         }
         JOptionPane.showMessageDialog(null, "Este usuario não existe.");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {
         close();
         registerPF menu = new registerPF();
         menu.setVisible(true);
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {
         close();
         registerPJ menu = new registerPJ();
         menu.setVisible(true);
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -231,5 +219,4 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField jPassword;
     private javax.swing.JTextField jTextEmail;
-    // End of variables declaration//GEN-END:variables
 }

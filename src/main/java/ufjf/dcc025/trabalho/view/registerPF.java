@@ -28,7 +28,6 @@ public class registerPF extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -85,12 +84,6 @@ public class registerPF extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Email");
 
-        jTextNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextNomeActionPerformed(evt);
-            }
-        });
-
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(140, 92, 242));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -117,30 +110,6 @@ public class registerPF extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Nº");
 
-        jTextEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextEmailActionPerformed(evt);
-            }
-        });
-
-        jTextEndereco.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextEnderecoActionPerformed(evt);
-            }
-        });
-
-        jTextCidade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextCidadeActionPerformed(evt);
-            }
-        });
-
-        jTextEstado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextEstadoActionPerformed(evt);
-            }
-        });
-
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel12.setText("Estado");
@@ -152,12 +121,6 @@ public class registerPF extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel14.setText("Confirmar senha");
-
-        jTextN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextNActionPerformed(evt);
-            }
-        });
 
         try {
             jTextCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -307,39 +270,16 @@ public class registerPF extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jTextNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextNomeActionPerformed
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {
         close();
         login menu = new login();
         menu.setVisible(true);
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }
 
-    private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextEmailActionPerformed
-
-    private void jTextEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEnderecoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextEnderecoActionPerformed
-
-    private void jTextCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextCidadeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextCidadeActionPerformed
-
-    private void jTextEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEstadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextEstadoActionPerformed
-
-    private void jTextNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextNActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
 
         String line = new String();
         String fileName = "clients.txt";
@@ -419,10 +359,9 @@ public class registerPF extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Preencha todos os campos.");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -450,5 +389,4 @@ public class registerPF extends javax.swing.JFrame {
     private javax.swing.JTextField jTextNome;
     private javax.swing.JFormattedTextField jTextRG;
     private javax.swing.JPasswordField jTextSenha;
-    // End of variables declaration//GEN-END:variables
 }

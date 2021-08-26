@@ -3,6 +3,8 @@ package ufjf.dcc025.trabalho.view;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 
+import javax.swing.JOptionPane;
+
 import ufjf.dcc025.trabalho.model.BankAccount;
 import ufjf.dcc025.trabalho.model.User;
 
@@ -25,8 +27,6 @@ public class index extends javax.swing.JFrame {
 	}
 
 	@SuppressWarnings("unchecked")
-	// <editor-fold defaultstate="collapsed" desc="Generated
-	// Code">//GEN-BEGIN:initComponents
 	private void initComponents(BankAccount bank) {
 
 		jLabel2 = new javax.swing.JLabel();
@@ -102,11 +102,6 @@ public class index extends javax.swing.JFrame {
 		jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 		jLabel5.setForeground(new java.awt.Color(140, 92, 242));
 		jLabel5.setText("Número da conta: ");
-		jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				jLabel5MouseClicked(evt);
-			}
-		});
 
 		jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 		jLabel7.setText("" + bank.getAccount());
@@ -115,21 +110,16 @@ public class index extends javax.swing.JFrame {
 		jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 		jLabel8.setForeground(new java.awt.Color(140, 92, 242));
 		jLabel8.setText("Agência:");
-		jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				jLabel8MouseClicked(evt);
-			}
-		});
 
 		jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 		jLabel9.setText("" + bank.getBranch());
 
 		jPanel5.setBackground(new java.awt.Color(230, 230, 230));
-		jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
-			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				jPanel5MouseClicked(evt);
-			}
-		});
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt, bank);
+            }
+        });
 
 		jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/movimentacoes.png"))); // NOI18N
 
@@ -225,11 +215,6 @@ public class index extends javax.swing.JFrame {
 			jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 			jLabel12.setForeground(new java.awt.Color(140, 92, 242));
 			jLabel12.setText("Sair");
-			jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
-				public void mouseClicked(java.awt.event.MouseEvent evt) {
-					jLabel12MouseClicked(evt);
-				}
-			});
 		}
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -301,49 +286,38 @@ public class index extends javax.swing.JFrame {
 						.addComponent(jLabel12).addContainerGap()));
 
 		pack();
-	}// </editor-fold>//GEN-END:initComponents
+	}
 
-	private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jPanel2MouseClicked
+	private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {
 		close();
 		settings menu = new settings();
 		menu.setVisible(true);
-	}// GEN-LAST:event_jPanel2MouseClicked
+	}
 
-	private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jLabel3MouseClicked
+	private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {
 		close();
 		statement menu = new statement();
 		menu.setVisible(true);
-	}// GEN-LAST:event_jLabel3MouseClicked
+	}
 
-	private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jLabel5MouseClicked
-		// TODO add your handling code here:
-	}// GEN-LAST:event_jLabel5MouseClicked
-
-	private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jLabel8MouseClicked
-		// TODO add your handling code here:
-	}// GEN-LAST:event_jLabel8MouseClicked
-
-	private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jPanel5MouseClicked
-		// TODO add your handling code here:
-	}// GEN-LAST:event_jPanel5MouseClicked
-
-	private void jPanel3MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {// GEN-FIRST:event_jPanel3MouseClicked
+	private void jPanel3MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
 		close();
 		transfer menu = new transfer(bank);
 		menu.setVisible(true);
-	}// GEN-LAST:event_jPanel3MouseClicked
+	}
 
-	private void jPanel7MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {// GEN-FIRST:event_jPanel7MouseClicked
+	private void jPanel7MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
 		close();
 		deposit menu = new deposit(bank);
 		menu.setVisible(true);
-	}// GEN-LAST:event_jPanel7MouseClicked
+	}
+	
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
+		close();
+		payment menu = new payment(bank);
+		menu.setVisible(true);
+    }  
 
-	private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jLabel12MouseClicked
-		// TODO add your handling code here:
-	}// GEN-LAST:event_jLabel12MouseClicked
-
-	// Variables declaration - do not modify//GEN-BEGIN:variables
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel10;
 	private javax.swing.JLabel jLabel11;
@@ -364,6 +338,5 @@ public class index extends javax.swing.JFrame {
 	private javax.swing.JPanel jPanel3;
 	private javax.swing.JPanel jPanel5;
 	private javax.swing.JPanel jPanel7;
-	// End of variables declaration//GEN-END:variables
 
 }
