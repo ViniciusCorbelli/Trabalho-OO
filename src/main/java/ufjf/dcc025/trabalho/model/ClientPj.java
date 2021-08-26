@@ -31,19 +31,19 @@ public class ClientPj extends User {
         this.Ie = Ie;
     }
 
-    public static String store(User user) {
+    public String store(User client) {
 
         try {
             FileWriter file = new FileWriter("clients.txt", true);
             PrintWriter printFile = new PrintWriter(file);
 
-            printFile.println("Email: " + user.getEmail());
+            printFile.println("Email: " + client.getEmail());
             printFile.println("Tipo: PJ");
-            printFile.println("Nome: " + user.getName());
-            printFile.println("CNPJ: " + ClientPj.getCnpj());
-            printFile.println("Ie: " + ClientPj.getIe());
-            printFile.println("Acesso: " + user.getAccess());
-            printFile.println("Senha: " + user.getPassword());
+            printFile.println("Nome: " + client.getName());
+            printFile.println("CNPJ: " + this.getCnpj());
+            printFile.println("Ie: " + this.getIe());
+            printFile.println("Acesso: " + client.getAccess());
+            printFile.println("Senha: " + client.getPassword());
             printFile.println();
 
             printFile.close();

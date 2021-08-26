@@ -3,6 +3,7 @@ package ufjf.dcc025.trabalho.model;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Logger;
 
 /*
   @autores: Ant�nio Marcos Souza Pereira - 202065245A
@@ -49,15 +50,15 @@ public class ClientPf extends User {
         this.birthDate = birthDate;
     }
 
-    public String store(User user, Address address) {
+    public String store(User client, Address address) {
 
         try {
             FileWriter file = new FileWriter("clients.txt", true);
             PrintWriter printFile = new PrintWriter(file);
 
-            printFile.println("Email: " + user.getEmail());
+            printFile.println("Email: " + client.getEmail());
             printFile.println("Tipo: PF");
-            printFile.println("Nome: " + user.getName());
+            printFile.println("Nome: " + client.getName());
             printFile.println("CPF: " + this.getCpf());
             printFile.println("RG: " + this.getRg());
             printFile.println("DataNascimento: " + this.getBirthDate());
@@ -66,8 +67,8 @@ public class ClientPf extends User {
             printFile.println("CEP: " + address.getZipcode());
             printFile.println("Cidade: " + address.getCity());
             printFile.println("Estado: " + address.getState());
-            printFile.println("Acesso: " + user.getAccess());
-            printFile.println("Senha: " + user.getPassword());
+            printFile.println("Acesso: " + client.getAccess());
+            printFile.println("Senha: " + client.getPassword());
 
             printFile.println();
 

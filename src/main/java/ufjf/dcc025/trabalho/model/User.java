@@ -7,7 +7,7 @@ package ufjf.dcc025.trabalho.model;
 
 /**
  *
- * @author Vinï¿½cius
+ * @author Vinícius
  */
 public class User {
 
@@ -41,14 +41,14 @@ public class User {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+    	this.email = email;
     }
 
     public void setAccess(accessType access) {
-        this.access = access;
+    	this.access = access;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+    	this.password = password;
     }
 }

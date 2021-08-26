@@ -2,10 +2,6 @@ package ufjf.dcc025.trabalho.view;
 
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
-import java.io.BufferedReader;
-import java.io.FileReader;
-
-import ufjf.dcc025.trabalho.model.BankAccount;
 
 /*
   @autores: Antônio Marcos Souza Pereira - 202065245A
@@ -16,8 +12,8 @@ import ufjf.dcc025.trabalho.model.BankAccount;
 
 public class statement extends javax.swing.JFrame {
 
-    public statement(BankAccount bank) {
-        initComponents(bank);
+    public statement() {
+        initComponents();
     }
 
     public void close() {
@@ -27,7 +23,7 @@ public class statement extends javax.swing.JFrame {
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents(BankAccount bank) {
+    private void initComponents() {
 
         jLabel6 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -35,7 +31,6 @@ public class statement extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -52,7 +47,21 @@ public class statement extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(140, 92, 242));
-        jLabel6.setText("XBank");
+        jLabel6.setText("Banco XXXXX");
+
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel15.setText("10");
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel16.setText("JUL");
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel17.setText("R$ 00,00");
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel18.setText("Pix");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -115,7 +124,7 @@ public class statement extends javax.swing.JFrame {
         jLabel1.setText("Saldo em conta");
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel8.setText("R$ " + bank.getStatement());
+        jLabel8.setText("R$ 000,00");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -138,66 +147,24 @@ public class statement extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        
-        String line = new String();
-        boolean account = false;
-        String value = new String();
-        String type = new String();
-        String date = new String();
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        try {
-            jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("10");
 
-            jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-            jLabel2.setText("10");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel3.setText("JUL");
 
-            jLabel3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-            jLabel3.setText("JUL");
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel5.setText("R$ 00,00");
 
-            jLabel5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-            jLabel5.setText("R$ 00,00");
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel9.setText("Pix");
 
-            jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-            jLabel9.setText("Pix");
-            FileReader fileReader = new FileReader("movements.txt");
-            BufferedReader bufferFile = new BufferedReader(fileReader);
-            while (true) {
-                line = bufferFile.readLine();
-                if (line == null) {
-                    break;
-                }
-                if (line.startsWith("N° da Conta: ") && bank.getAccount().equals(line.substring(13))) {
-                    account = true;
-                }
-                if (account == true) {
-                    if (line.startsWith("Valor: ")) {
-                        value = line.substring(7);
-                    }
-                    if (line.startsWith("Tipo: ")) {
-                        type = line.substring(6);
-                    }
-                    if (line.startsWith("Data: ")) {
-                        type = line.substring(6);
+        jPanel2.setBackground(new java.awt.Color(230, 230, 230));
 
-                        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-                        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-                        jLabel2.setText("10");
-
-                        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-                        jLabel3.setText("JUL");
-
-                        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-                        jLabel5.setText("R$ " + value);
-
-                        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-                        jLabel9.setText("Pix");
-                        account = false;
-                    }
-                }
-            }
-        } catch (Exception e) {
-        }
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel10.setText("Julho de 2021");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -276,7 +243,7 @@ public class statement extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -316,6 +283,5 @@ public class statement extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
