@@ -15,8 +15,8 @@ import ufjf.dcc025.trabalho.model.User;
 
 public class index extends javax.swing.JFrame {
     
-    public index(User user, BankAccount bank) {
-        initComponents(user, bank);
+    public index(BankAccount bank) {
+        initComponents(bank);
     }
 
     public void close() {
@@ -26,7 +26,7 @@ public class index extends javax.swing.JFrame {
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents(User user, BankAccount bank) {
+    private void initComponents(BankAccount bank) {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -52,7 +52,7 @@ public class index extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("R$ 000,00");
+        jLabel2.setText("R$ " + bank.getStatement());
 
         jLabel3.setBackground(new java.awt.Color(140, 92, 242));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -115,7 +115,7 @@ public class index extends javax.swing.JFrame {
         });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setText("123456");
+        jLabel7.setText("" + bank.getAccount());
 
         jLabel8.setBackground(new java.awt.Color(140, 92, 242));
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -128,7 +128,7 @@ public class index extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel9.setText("123");
+        jLabel9.setText("" + bank.getBranch());
 
         jPanel5.setBackground(new java.awt.Color(230, 230, 230));
         jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {

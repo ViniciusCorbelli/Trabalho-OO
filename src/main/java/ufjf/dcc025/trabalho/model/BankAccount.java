@@ -57,6 +57,7 @@ public class BankAccount {
         String fileName = "banckAccount.txt";
         File file = new File(fileName);
         BankAccount bank = new BankAccount(client, 0.0);
+        this.client = client;
         boolean encontrou = false;
 
         if (file.exists()) {

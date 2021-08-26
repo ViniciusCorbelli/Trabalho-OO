@@ -193,7 +193,7 @@ public class login extends javax.swing.JFrame {
                                 close();
                                 BankAccount bank = new BankAccount(user, null);
                                 bank.getBankAcount(user);
-                                index menu = new index(user, bank);
+                                index menu = new index(bank);
                                 menu.setVisible(true);
                                 return;
                             } else {
