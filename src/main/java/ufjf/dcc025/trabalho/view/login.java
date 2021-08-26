@@ -178,15 +178,14 @@ public class login extends javax.swing.JFrame {
                         if (line.startsWith("Nome: ")) {
                             user.setName(line.substring(6));
                         }
-                        if (line.startsWith("Acesso: ")) {
-                            User.accessType access = User.accessType.USER;
-                            if (line.substring(8) == "ADMINISTRATOR") {
-                                access = User.accessType.ADMINISTRATOR;
-                            }
-                            if (line.substring(8) == "EMPLOYEE") {
-                                access = User.accessType.EMPLOYEE;
-                            }
-                            user.setAccess(access);
+                        if (line.equals("Acesso: ADMINISTRATOR")) {
+                            user.setAccess(User.accessType.ADMINISTRATOR);
+                        }
+                        if (line.equals("Acesso: EMPLOYEE")) {
+                            user.setAccess(User.accessType.EMPLOYEE);
+                        }
+                        if (line.equals("Acesso: USER")) {
+                            user.setAccess(User.accessType.USER);
                         }
                         if (line.startsWith("Senha: ")) {
                         	user.setPassword(line.substring(7));

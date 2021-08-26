@@ -11,7 +11,14 @@ package ufjf.dcc025.trabalho.model;
  */
 public class Deposit extends Movement {
     
-    private String accountNumber;
-    private String branchNumber;
+	private BankAccount bankAccount;
+	
+	public BankAccount getBankAccount() {
+		return bankAccount;
+	}
+
+	public void setBankAccount(BankAccount bankAccount) {
+		this.bankAccount = bankAccount;
+	}
     
 }

@@ -1,7 +1,7 @@
 Email: vinicius.corbelli@estudante.ufjf.br
 Tipo: PF
 Nome: Vinícius de Oliveira Corbelli
-CPF: 019.648.596-70
+CPF: 111.111.111-11
 RG: 123123123123
 DataNascimento: 16/02/2001
 Rua: Rua XXXXXX
@@ -11,4 +11,19 @@ Cidade: Juiz de Fora
 Estado: MG
 Acesso: USER
 Senha: 123456
+
+Email: antonio@estudante.ufjf.br
+Tipo: PF
+Nome: Antonio
+CPF: 222.222.222-22
+RG: 123123123123
+DataNascimento: 10/01/2000
+Rua: Rua XXXXXX
+Numero: 123
+CEP: 36070-700
+Cidade: Juiz de Fora
+Estado: MG
+Acesso: ADMINISTRATOR
+Senha: 123456
+
 

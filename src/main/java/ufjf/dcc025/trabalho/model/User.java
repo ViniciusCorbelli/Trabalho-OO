@@ -15,6 +15,7 @@ public class User {
     private String email;
     private accessType access;
     private String password;
+    public accessType accessTypeEnum;
 
     public enum accessType {
         ADMINISTRATOR, EMPLOYEE, USER

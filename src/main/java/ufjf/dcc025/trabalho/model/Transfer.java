@@ -9,10 +9,16 @@ package ufjf.dcc025.trabalho.model;
  *
  * @author Vinícius
  */
-public class Pix extends Movement {
+public class Transfer extends Movement {
 
-    private enum key {
-        CPF, CNPJ;
-    }
+	private BankAccount bankAccount;
+	
+	public BankAccount getBankAccount() {
+		return bankAccount;
+	}
 
+	public void setBankAccount(BankAccount bankAccount) {
+		this.bankAccount = bankAccount;
+	}
+    
 }

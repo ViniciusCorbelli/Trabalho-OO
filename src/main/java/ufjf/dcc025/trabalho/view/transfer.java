@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 import ufjf.dcc025.trabalho.model.BankAccount;
 import ufjf.dcc025.trabalho.model.Movement;
-import ufjf.dcc025.trabalho.model.Payment;
+import ufjf.dcc025.trabalho.model.Transfer;
 
 /*
   @autores: Antônio Marcos Souza Pereira - 202065245A
@@ -16,9 +16,9 @@ import ufjf.dcc025.trabalho.model.Payment;
             Vinícius de Oliveira Corbelli - 202065093A
  */
 
-public class payment extends javax.swing.JFrame {
+public class transfer extends javax.swing.JFrame {
 
-    public payment(BankAccount bank) {
+    public transfer(BankAccount bank) {
         initComponents(bank);
     }
 
@@ -263,7 +263,7 @@ public class payment extends javax.swing.JFrame {
     	if (!(jTextField5.getText().equals("") || jTextField1.getText().equals("") || jTextField2.getText().equals("") || jPasswordField4.getText().equals(""))) {
     		if (jPasswordField4.getText().equals(bank.getClient().getPassword())) {
     			if (bank.hasBanckAccount(jTextField1.getText(), jTextField2.getText())) {
-	    			Movement moviment = new Payment();
+	    			Movement moviment = new Transfer();
 	    			moviment.setBankAccount(bank);
 	    			moviment.setValue(Double.parseDouble(jTextField5.getText()));
 	    			
@@ -272,8 +272,13 @@ public class payment extends javax.swing.JFrame {
 	    			recebeu.addStatement(Double.parseDouble(jTextField5.getText()));
 	    			
 	    			JOptionPane.showMessageDialog(null, moviment.transfer(bank, Double.parseDouble(jTextField5.getText()), "pagamento", false));
+	    			moviment.transfer(recebeu, Double.parseDouble(jTextField5.getText()), "recebeu", true);
 	    			recebeu.updateFile();
 	    			bank.updateFile();
+	    			
+	    			close();
+	    			transfer menu = new transfer(bank);
+	    			menu.setVisible(true);
     			
     			} else {
     				JOptionPane.showMessageDialog(null, "Esta conta não existe!");

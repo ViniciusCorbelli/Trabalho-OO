@@ -13,53 +13,46 @@ import javax.swing.JOptionPane;
             Rafaela Fernandes Horta - 202065182A
             Vinï¿½cius de Oliveira Corbelli - 202065093A
  */
-public class Movement {
+public abstract class Movement {
 
-	 private BankAccount bankAccount;
-	    private Double value;
-	    
-	    public BankAccount getBankAccount() {
-	        return bankAccount;
-	    }
+	private Double value;
 
-	    public void setBankAccount(BankAccount bankAccount) {
-	        this.bankAccount = bankAccount;
-	    }
+	public double getValue() {
+		return this.value;
+	}
 
-	    public double getValue() {
-	        return this.value;
-	    }
+	public void setValue(Double value) {
+		this.value = value;
+	}
 
-	    public void setValue(Double value) {
-	    	this.value = value;
-	    }
-	    
-	    public String transfer(BankAccount payer, double value, String type, boolean receber) {
-	        if (payer.getStatement() < value) {
-	            return "Você não possui saldo suficiente!";
-	        } else {
-	        	if (receber == false)
-	            payer.removeStatement(value);
-	        	else
-	        		payer.addStatement(value);
+	public String transfer(BankAccount payer, double value, String type, boolean receber) {
+		if (receber == false && payer.getStatement() < value) {
+			return "Você não possui saldo suficiente!";
+		} else {
+			if (receber == false)
+				payer.removeStatement(value);
+			else
+				payer.addStatement(value);
 
-	            // Extrato de Quem Recebeu
-	            try {
-	                FileWriter file = new FileWriter("movements.txt", true);
-	                PrintWriter printFile = new PrintWriter(file);
-	                printFile.println("N° da Conta: " + payer.getAccount());
-	                printFile.println("Valor: " + value);
-	                printFile.println("Tipo: Enviado " + type);
-	                printFile.println("Data: " + LocalDate.now());
-	                printFile.println();
-	                printFile.close();
-	                file.close();
-	                
-	                return "Movimentação realizada com sucesso!";
-	            } catch (IOException ex) {
-	            }
-	        }
-			return "Ocorreu um erro!";
-	    }
-    
+			// Extrato de Quem Recebeu
+			try {
+				FileWriter file = new FileWriter("movements.txt", true);
+				PrintWriter printFile = new PrintWriter(file);
+				printFile.println("N° da Conta: " + payer.getAccount());
+				printFile.println("Valor: " + value);
+				printFile.println("Tipo: " + type);
+				printFile.println("Data: " + LocalDate.now());
+				printFile.println();
+				printFile.close();
+				file.close();
+
+				return "Movimentação realizada com sucesso!";
+			} catch (IOException ex) {
+			}
+		}
+		return "Ocorreu um erro!";
+	}
+
+	public abstract void setBankAccount(BankAccount bank);
+
 }

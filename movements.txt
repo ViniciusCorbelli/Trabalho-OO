@@ -1,26 +1,26 @@
 N° da Conta: 166625
 Valor: 10.0
-Tipo: Enviado pagamento
+Tipo: pagamento
 Data: 2021-08-26
 
 N° da Conta: 166625
 Valor: 10.0
-Tipo: Enviado pagamento
+Tipo: pagamento
 Data: 2021-08-26
 
 N° da Conta: 166625
 Valor: 100.0
-Tipo: Enviado pagamento
+Tipo: pagamento
 Data: 2021-08-26
 
 N° da Conta: 166625
 Valor: 11.0
-Tipo: Enviado pagamento
+Tipo: pagamento
 Data: 2021-08-26
 
 N° da Conta: 166625
 Valor: 15.0
-Tipo: Enviado pagamento
+Tipo: pagamento
 Data: 2021-08-26
 
 N° da Conta: 166625
@@ -30,11 +30,21 @@ Data: 2021-08-26
 
 N° da Conta: 166625
 Valor: 10.0
-Tipo: Enviado pagamento
+Tipo: pagamento
 Data: 2021-08-26
 
 N° da Conta: 166625
 Valor: 10.0
-Tipo: Enviado pagamento
+Tipo: pagamento
+Data: 2021-08-26
+
+N° da Conta: 023171
+Valor: 500.0
+Tipo: deposito
+Data: 2021-08-26
+
+N° da Conta: 023171
+Valor: 300.0
+Tipo: deposito
 Data: 2021-08-26
 

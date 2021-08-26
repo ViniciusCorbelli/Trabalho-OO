@@ -169,6 +169,7 @@ public class BankAccount {
 
 		this.branch = branch;
 		this.account = account;
+		this.statement = 0.0;
 
 		try {
 			FileWriter file = new FileWriter("banckAccount.txt", true);

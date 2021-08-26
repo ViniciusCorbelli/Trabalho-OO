@@ -1,10 +1,10 @@
 Email: vinicius.corbelli@estudante.ufjf.br
 Branch: 191
 Account: 166625
-Statement: 990.0
+Statement: 10.0
 
-Email: daniel@estudante.ufjf.br
-Branch: 192
-Account: 166626
-Statement: 1010.0
+Email: antonio@estudante.ufjf.br
+Branch: 788
+Account: 023171
+Statement: 810.0
 
