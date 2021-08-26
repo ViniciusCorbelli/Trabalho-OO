@@ -172,7 +172,7 @@ public class index extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(230, 230, 230));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel3MouseClicked(evt);
+                jPanel3MouseClicked(evt, bank);
             }
         });
 
@@ -348,9 +348,10 @@ public class index extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel5MouseClicked
 
-    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel3MouseClicked
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {//GEN-FIRST:event_jPanel3MouseClicked
+        close();
+        payment menu = new payment(bank);
+        menu.setVisible(true);    }//GEN-LAST:event_jPanel3MouseClicked
 
     private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
         // TODO add your handling code here:

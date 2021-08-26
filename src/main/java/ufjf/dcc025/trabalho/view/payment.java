@@ -3,6 +3,12 @@ package ufjf.dcc025.trabalho.view;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 
+import javax.swing.JOptionPane;
+
+import ufjf.dcc025.trabalho.model.BankAccount;
+import ufjf.dcc025.trabalho.model.Movement;
+import ufjf.dcc025.trabalho.model.Payment;
+
 /*
   @autores: Antônio Marcos Souza Pereira - 202065245A
             Pedro Barbosa Chaves - 202065236A
@@ -12,8 +18,8 @@ import java.awt.event.WindowEvent;
 
 public class payment extends javax.swing.JFrame {
 
-    public payment() {
-        initComponents();
+    public payment(BankAccount bank) {
+        initComponents(bank);
     }
 
     public void close() {
@@ -23,7 +29,7 @@ public class payment extends javax.swing.JFrame {
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents(BankAccount bank) {
 
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -52,6 +58,11 @@ public class payment extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(240, 240, 240));
         jButton1.setText("Confirmar Pagamento");
         jButton1.setBorderPainted(false);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt, bank);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -87,7 +98,7 @@ public class payment extends javax.swing.JFrame {
         });
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
+                jLabel4MouseClicked(evt, bank);
             }
         });
 
@@ -100,7 +111,7 @@ public class payment extends javax.swing.JFrame {
         jLabel9.setText("Senha");
 
         jTextField5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField5.setText("R$");
+        jTextField5.setText("");
         jTextField5.setToolTipText("");
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +135,7 @@ public class payment extends javax.swing.JFrame {
         jLabel1.setText("Saldo em conta");
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel8.setText("R$ 000,00");
+        jLabel8.setText("R$ " + bank.getStatement());
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -226,10 +237,10 @@ public class payment extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        /*close();
-        index menu = new index();
-        menu.setVisible(true);*/
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {//GEN-FIRST:event_jLabel4MouseClicked
+        close();
+        index menu = new index(bank);
+        menu.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
@@ -247,6 +258,33 @@ public class payment extends javax.swing.JFrame {
     private void jLabel4AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel4AncestorAdded
 
     }//GEN-LAST:event_jLabel4AncestorAdded
+    
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
+    	if (!(jTextField5.getText().equals("") || jTextField1.getText().equals("") || jTextField2.getText().equals("") || jPasswordField4.getText().equals(""))) {
+    		if (jPasswordField4.getText().equals(bank.getClient().getPassword())) {
+    			if (bank.hasBanckAccount(jTextField1.getText(), jTextField2.getText())) {
+	    			Movement moviment = new Payment();
+	    			moviment.setBankAccount(bank);
+	    			moviment.setValue(Double.parseDouble(jTextField5.getText()));
+	    			
+	    			BankAccount recebeu = new BankAccount(null, null);
+	    			recebeu = recebeu.getBanckAccount(jTextField1.getText(), jTextField2.getText());
+	    			recebeu.addStatement(Double.parseDouble(jTextField5.getText()));
+	    			
+	    			JOptionPane.showMessageDialog(null, moviment.transfer(bank, Double.parseDouble(jTextField5.getText()), "pagamento", false));
+	    			recebeu.updateFile();
+	    			bank.updateFile();
+    			
+    			} else {
+    				JOptionPane.showMessageDialog(null, "Esta conta não existe!");
+    			}
+    		} else {
+    			JOptionPane.showMessageDialog(null, "Senha incorreta!");
+    		}
+    	} else {
+    		JOptionPane.showMessageDialog(null, "Preencha todos os campos!");
+    	}
+    }  
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

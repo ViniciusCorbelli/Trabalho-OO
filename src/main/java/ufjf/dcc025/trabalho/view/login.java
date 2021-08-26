@@ -189,6 +189,7 @@ public class login extends javax.swing.JFrame {
                             user.setAccess(access);
                         }
                         if (line.startsWith("Senha: ")) {
+                        	user.setPassword(line.substring(7));
                             if (password.equals(line.substring(7))) {
                                 close();
                                 BankAccount bank = new BankAccount(user, null);
