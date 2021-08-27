@@ -56,7 +56,7 @@ public class BankAccount {
 
 	public BankAccount getBankAcount(User client) {
 		String line = new String();
-		String fileName = "banckAccount.txt";
+		String fileName = "bankAccount.txt";
 		File file = new File(fileName);
 		BankAccount bank = new BankAccount(client, 0.0);
 		this.client = client;
@@ -95,9 +95,9 @@ public class BankAccount {
 		return bank;
 	}
 
-	public boolean hasBanckAccount(String branch, String account) {
+	public boolean hasBankAccount(String branch, String account) {
 		String line = new String();
-		String fileName = "banckAccount.txt";
+		String fileName = "bankAccount.txt";
 		File file = new File(fileName);
 		boolean encontrou = false;
 
@@ -124,9 +124,9 @@ public class BankAccount {
 		return false;
 	}
 
-	public BankAccount getBanckAccount(String branch, String account) {
+	public BankAccount getBankAccount(String branch, String account) {
 		String line = new String();
-		String fileName = "banckAccount.txt";
+		String fileName = "bankAccount.txt";
 		File file = new File(fileName);
 		boolean encontrou = false;
 		BankAccount bank = new BankAccount(client, 0.0);
@@ -172,7 +172,7 @@ public class BankAccount {
 		this.statement = 0.0;
 
 		try {
-			FileWriter file = new FileWriter("banckAccount.txt", true);
+			FileWriter file = new FileWriter("bankAccount.txt", true);
 			PrintWriter printFile = new PrintWriter(file);
 
 			printFile.println("Email: " + client.getEmail());
@@ -191,7 +191,7 @@ public class BankAccount {
 
 		List<String> linhas = new ArrayList<>();
 		String line = new String();
-		String fileName = "banckAccount.txt";
+		String fileName = "bankAccount.txt";
 		File file = new File(fileName);
 		boolean encontrou = false;
 

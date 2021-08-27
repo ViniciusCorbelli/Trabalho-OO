@@ -185,10 +185,10 @@ public class deposit extends javax.swing.JFrame {
 
 	private void jButton1MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
     	if (!(jTextField5.getText().equals("") || jTextField1.getText().equals("") || jTextField2.getText().equals(""))) {
-    			if (bank.hasBanckAccount(jTextField1.getText(), jTextField2.getText())) {
+    			if (bank.hasBankAccount(jTextField1.getText(), jTextField2.getText())) {
     				
     				BankAccount recebeu = new BankAccount(null, null);
-    				recebeu = recebeu.getBanckAccount(jTextField1.getText(), jTextField2.getText());
+    				recebeu = recebeu.getBankAccount(jTextField1.getText(), jTextField2.getText());
 	    			recebeu.addStatement(Double.parseDouble(jTextField5.getText()));
 	    			
 	    			Movement moviment = new Deposit();

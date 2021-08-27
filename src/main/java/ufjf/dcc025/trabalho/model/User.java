@@ -9,10 +9,11 @@ package ufjf.dcc025.trabalho.model;
  *
  * @author Vinícius
  */
-public class User {
+public abstract class User {
 
     private String name;
     private String email;
+    private Address address;
     private accessType access;
     private String password;
     public accessType accessTypeEnum;
@@ -29,6 +30,10 @@ public class User {
         return email;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+    
     public accessType getAccess() {
         return access;
     }
@@ -44,6 +49,10 @@ public class User {
     public void setEmail(String email) {
     	this.email = email;
     }
+    
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
     public void setAccess(accessType access) {
     	this.access = access;
@@ -52,4 +61,5 @@ public class User {
     public void setPassword(String password) {
     	this.password = password;
     }
+    
 }

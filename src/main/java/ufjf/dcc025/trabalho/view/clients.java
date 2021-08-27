@@ -27,9 +27,9 @@ import ufjf.dcc025.trabalho.model.BankAccount;
             Vinícius de Oliveira Corbelli - 202065093A
  */
 
-public class statement extends javax.swing.JFrame {
+public class clients extends javax.swing.JFrame {
 
-	public statement(BankAccount bank) {
+	public clients(BankAccount bank) {
 		initComponents(bank);
 	}
 
@@ -131,10 +131,10 @@ public class statement extends javax.swing.JFrame {
 		jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
 		jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-		jLabel1.setText("Saldo em conta");
+		jLabel1.setText("Lista de clientes");
 
 		jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-		jLabel8.setText("R$ " + bank.getStatement());
+		jLabel8.setText("******");
 
 		javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
 		jPanel1.setLayout(jPanel1Layout);
@@ -154,11 +154,11 @@ public class statement extends javax.swing.JFrame {
 		innerPanel.setLayout(new GridLayout(0, 1, 0, 1));
 
 		String line = new String();
-		String fileName = "movements.txt";
+		String fileName = "bankAccount.txt";
 		File file = new File(fileName);
-		boolean encontrou = false;
+		
 		int i = 0;
-		String dataFile, ValorFile = "", descricaoFile = "";
+		String email = "", branch = "", account = "", statement = "";
 
 		if (file.exists()) {
 			try {
@@ -171,46 +171,47 @@ public class statement extends javax.swing.JFrame {
 						break;
 					}
 
+					if (line.startsWith("Email: ")) {
+						email = line.substring(7);
+					}
 					
-					if (line.equals("N° da Conta: " + bank.getAccount())) {
-						encontrou = true;
-						i++;
+					if (line.startsWith("Branch: ")) {
+						branch = line.substring(8);
+					}
+					
+					if (line.startsWith("Account: ")) {
+						account = line.substring(9);
 					}
 
-					if (encontrou == true) {
+					if (line.startsWith("Statement: ")) {
+						i++;
+						statement = line.substring(11);
 
-						if (line.startsWith("Valor: ")) {
-							ValorFile = line.substring(7);
-						}
+						JPanel rowPanel = new JPanel();
+						rowPanel.setPreferredSize(new Dimension(250, 80));
+						rowPanel.setBackground(new java.awt.Color(220, 220, 220));
+						innerPanel.add(rowPanel);
+						rowPanel.setLayout(null);
 
-						if (line.startsWith("Tipo: ")) {
-							descricaoFile = line.substring(6);
-						}
-						if (line.startsWith("Data: ")) {
-							encontrou = false;
-							dataFile = line.substring(6);
+						JLabel jlabel1 = new JLabel(email);
+						jlabel1.setBounds(20, 10, 200, 40);
+						rowPanel.add(jlabel1);
 
-							JPanel rowPanel = new JPanel();
-							rowPanel.setPreferredSize(new Dimension(250, 80));
-							rowPanel.setBackground(new java.awt.Color(220, 220, 220));
-							innerPanel.add(rowPanel);
-							rowPanel.setLayout(null);
+						JLabel jlabel2 = new JLabel("R$ " + statement);
+						jlabel2.setBounds(400, 10, 160, 40);
+						rowPanel.add(jlabel2);
 
-							JLabel data = new JLabel(dataFile);
-							data.setBounds(20, 10, 160, 40);
-							rowPanel.add(data);
+						JLabel jlabel3 = new JLabel("Agencia: " + branch);
+						jlabel3.setBounds(20, 40, 300, 40);
+						rowPanel.add(jlabel3);
 
-							JLabel valor = new JLabel("R$ " + ValorFile);
-							valor.setBounds(140, 10, 160, 40);
-							rowPanel.add(valor);
-
-							JLabel descricao = new JLabel("Tipo de transação: " + descricaoFile);
-							descricao.setBounds(140, 35, 300, 40);
-							rowPanel.add(descricao);
-
-							if (i % 2 == 0)
-								rowPanel.setBackground(new java.awt.Color(230, 230, 230));
-						}
+						
+						JLabel jlabel4 = new JLabel("Nº da conta: " + account);
+						jlabel4.setBounds(20, 60, 300, 40);
+						rowPanel.add(jlabel4);
+						
+						if (i % 2 == 0)
+							rowPanel.setBackground(new java.awt.Color(230, 230, 230));
 					}
 
 				}

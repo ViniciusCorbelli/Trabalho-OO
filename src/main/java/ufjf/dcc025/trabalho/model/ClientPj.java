@@ -31,19 +31,19 @@ public class ClientPj extends User {
         this.Ie = Ie;
     }
 
-    public String store(User client) {
+    public String store() {
 
         try {
             FileWriter file = new FileWriter("clients.txt", true);
             PrintWriter printFile = new PrintWriter(file);
 
-            printFile.println("Email: " + client.getEmail());
+            printFile.println("Email: " + this.getEmail());
             printFile.println("Tipo: PJ");
-            printFile.println("Nome: " + client.getName());
+            printFile.println("Nome: " + this.getName());
             printFile.println("CNPJ: " + this.getCnpj());
             printFile.println("Ie: " + this.getIe());
-            printFile.println("Acesso: " + client.getAccess());
-            printFile.println("Senha: " + client.getPassword());
+            printFile.println("Acesso: " + this.getAccess());
+            printFile.println("Senha: " + this.getPassword());
             printFile.println();
 
             printFile.close();
@@ -55,5 +55,4 @@ public class ClientPj extends User {
             return "Erro ao cadastrar!";
         }
     }
-
 }

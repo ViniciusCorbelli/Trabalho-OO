@@ -352,7 +352,7 @@ public class registerPF extends javax.swing.JFrame {
                 jTextSenha.setText("");
                 jTextConfirmarSenha.setText("");
 
-                JOptionPane.showMessageDialog(null, client.store(client, address));
+                JOptionPane.showMessageDialog(null, client.store(address));
             } else {
                 JOptionPane.showMessageDialog(null, "As senhas não coincidem!");
             }

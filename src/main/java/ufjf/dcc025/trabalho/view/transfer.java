@@ -210,13 +210,13 @@ public class transfer extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
     	if (!(jTextField5.getText().equals("") || jTextField1.getText().equals("") || jTextField2.getText().equals("") || jPasswordField4.getText().equals(""))) {
     		if (jPasswordField4.getText().equals(bank.getClient().getPassword())) {
-    			if (bank.hasBanckAccount(jTextField1.getText(), jTextField2.getText())) {
+    			if (bank.hasBankAccount(jTextField1.getText(), jTextField2.getText())) {
 	    			Movement moviment = new Transfer();
 	    			moviment.setBankAccount(bank);
 	    			moviment.setValue(Double.parseDouble(jTextField5.getText()));
 	    			
 	    			BankAccount recebeu = new BankAccount(null, null);
-	    			recebeu = recebeu.getBanckAccount(jTextField1.getText(), jTextField2.getText());
+	    			recebeu = recebeu.getBankAccount(jTextField1.getText(), jTextField2.getText());
 	    			recebeu.addStatement(Double.parseDouble(jTextField5.getText()));
 	    			
 	    			JOptionPane.showMessageDialog(null, moviment.transfer(bank, Double.parseDouble(jTextField5.getText()), "pagamento", false));

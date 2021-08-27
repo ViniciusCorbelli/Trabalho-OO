@@ -61,21 +61,21 @@ public class index extends javax.swing.JFrame {
 		jLabel3.setText("Ver extrato");
 		jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				jLabel3MouseClicked(evt);
+				jLabel3MouseClicked(evt, bank);
 			}
 		});
 
 		jPanel2.setBackground(new java.awt.Color(230, 230, 230));
 		jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				jPanel2MouseClicked(evt);
+				jPanel2MouseClicked(evt, bank);
 			}
 		});
 
 		jLabel6.setBackground(new java.awt.Color(220, 220, 220));
 		jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 		jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		jLabel6.setText("Configurações");
+		jLabel6.setText("Transferir");
 		jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 		jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -115,11 +115,11 @@ public class index extends javax.swing.JFrame {
 		jLabel9.setText("" + bank.getBranch());
 
 		jPanel5.setBackground(new java.awt.Color(230, 230, 230));
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel5MouseClicked(evt, bank);
-            }
-        });
+		jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+				jPanel5MouseClicked(evt, bank);
+			}
+		});
 
 		jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/movimentacoes.png"))); // NOI18N
 
@@ -146,36 +146,40 @@ public class index extends javax.swing.JFrame {
 										javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addComponent(jLabel16).addContainerGap()));
 
-		jPanel3.setBackground(new java.awt.Color(230, 230, 230));
-		jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
-			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				jPanel3MouseClicked(evt, bank);
-			}
-		});
+		if (bank.getClient().getAccess() == User.accessType.ADMINISTRATOR
+				|| bank.getClient().getAccess() == User.accessType.EMPLOYEE) {
+			jPanel3.setBackground(new java.awt.Color(230, 230, 230));
+			jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+				public void mouseClicked(java.awt.event.MouseEvent evt) {
+					jPanel3MouseClicked(evt, bank);
+				}
+			});
 
-		jLabel10.setBackground(new java.awt.Color(220, 220, 220));
-		jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-		jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		jLabel10.setText("Transferir");
-		jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-		jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+			jLabel10.setBackground(new java.awt.Color(220, 220, 220));
+			jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+			jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+			jLabel10.setText("Clientes");
+			jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+			jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-		jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/configurações.png"))); // NOI18N
+			jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/configurações.png"))); // NOI18N
 
-		javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-		jPanel3.setLayout(jPanel3Layout);
-		jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
-						Short.MAX_VALUE)
-				.addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-						jPanel3Layout.createSequentialGroup()
-								.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(jLabel11).addGap(55, 55, 55)));
-		jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-						.addContainerGap().addComponent(jLabel11)
-						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-						.addComponent(jLabel10).addContainerGap()));
+			javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+			jPanel3.setLayout(jPanel3Layout);
+			jPanel3Layout
+					.setHorizontalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+							.addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE,
+									javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+							.addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+									jPanel3Layout.createSequentialGroup()
+											.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+											.addComponent(jLabel11).addGap(55, 55, 55)));
+			jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+					.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+							.addContainerGap().addComponent(jLabel11)
+							.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+							.addComponent(jLabel10).addContainerGap()));
+		}
 
 		if (bank.getClient().getAccess() == User.accessType.ADMINISTRATOR) {
 			jPanel7.setBackground(new java.awt.Color(230, 230, 230));
@@ -211,10 +215,6 @@ public class index extends javax.swing.JFrame {
 											javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 									.addComponent(jLabel20).addContainerGap()));
 
-			jLabel12.setBackground(new java.awt.Color(140, 92, 242));
-			jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-			jLabel12.setForeground(new java.awt.Color(140, 92, 242));
-			jLabel12.setText("Sair");
 		}
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -288,21 +288,21 @@ public class index extends javax.swing.JFrame {
 		pack();
 	}
 
-	private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {
+	private void jPanel2MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
 		close();
-		settings menu = new settings();
+		transfer menu = new transfer(bank);
 		menu.setVisible(true);
 	}
 
-	private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {
+	private void jLabel3MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
 		close();
-		statement menu = new statement();
+		statement menu = new statement(bank);
 		menu.setVisible(true);
 	}
 
 	private void jPanel3MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
 		close();
-		transfer menu = new transfer(bank);
+		clients menu = new clients(bank);
 		menu.setVisible(true);
 	}
 
@@ -311,12 +311,12 @@ public class index extends javax.swing.JFrame {
 		deposit menu = new deposit(bank);
 		menu.setVisible(true);
 	}
-	
-    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
+
+	private void jPanel5MouseClicked(java.awt.event.MouseEvent evt, BankAccount bank) {
 		close();
 		payment menu = new payment(bank);
 		menu.setVisible(true);
-    }  
+	}
 
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel10;
