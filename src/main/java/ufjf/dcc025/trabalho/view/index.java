@@ -79,7 +79,7 @@ public class index extends javax.swing.JFrame {
 		jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 		jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-		jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/configurações.png"))); // NOI18N
+		jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/transferir.png"))); // NOI18N
 
 		javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
 		jPanel2.setLayout(jPanel2Layout);
@@ -121,7 +121,7 @@ public class index extends javax.swing.JFrame {
 			}
 		});
 
-		jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/movimentacoes.png"))); // NOI18N
+		jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pagar.png"))); // NOI18N
 
 		jLabel16.setBackground(new java.awt.Color(220, 220, 220));
 		jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -189,7 +189,7 @@ public class index extends javax.swing.JFrame {
 				}
 			});
 
-			jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/movimentacoes.png"))); // NOI18N
+			jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/depositar.png"))); // NOI18N
 
 			jLabel20.setBackground(new java.awt.Color(220, 220, 220));
 			jLabel20.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N

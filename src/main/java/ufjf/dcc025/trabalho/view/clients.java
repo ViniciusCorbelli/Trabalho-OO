@@ -202,12 +202,12 @@ public class clients extends javax.swing.JFrame {
 						rowPanel.add(jlabel2);
 
 						JLabel jlabel3 = new JLabel("Agencia: " + branch);
-						jlabel3.setBounds(20, 40, 300, 40);
+						jlabel3.setBounds(20, 30, 300, 40);
 						rowPanel.add(jlabel3);
 
 						
 						JLabel jlabel4 = new JLabel("Nº da conta: " + account);
-						jlabel4.setBounds(20, 60, 300, 40);
+						jlabel4.setBounds(20, 45, 300, 40);
 						rowPanel.add(jlabel4);
 						
 						if (i % 2 == 0)
