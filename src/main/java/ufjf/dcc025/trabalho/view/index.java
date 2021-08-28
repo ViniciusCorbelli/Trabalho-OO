@@ -162,7 +162,7 @@ public class index extends javax.swing.JFrame {
 			jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 			jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-			jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/configurações.png"))); // NOI18N
+			jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clients.png"))); // NOI18N
 
 			javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
 			jPanel3.setLayout(jPanel3Layout);
